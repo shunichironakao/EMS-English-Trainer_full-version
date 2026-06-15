@@ -90,6 +90,8 @@ footer{color:var(--muted);font-size:12px;text-align:center;padding:24px}
 .thanks{text-align:center;padding:20px}
 .thanks .big{font-size:40px}
 #homeView{margin:18px 0}
+.homeIntro{max-width:720px;margin:6px auto 14px;text-align:center;font-size:13px;color:var(--muted);line-height:1.7;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 16px}
+.homeIntro b{color:var(--text)}
 .homeTitle{font-size:19px;font-weight:700;margin:6px 0 16px;text-align:center;line-height:1.5}
 .symgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
 .symcard{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px 12px;text-align:center;cursor:pointer;transition:.15s}
@@ -176,7 +178,7 @@ let curPhase = (phasesPresent(curGroup)[0]||1);   // そのフェーズに該当
 let view = 'home';   // 'home'(症候選択) | 'train'(トレーニング)
 const SYM_EMOJI = {
   "01_Chest_Pain":"🫀","02_Respiratory_Distress":"🫁","03_Dizziness":"💫","04_Headache":"🤕",
-  "05_Back_Pain":"🦴","06_Altered_Consciousness":"😴","07_Abdominal_Pain":"😣",
+  "05_Back_Pain":"🧍","06_Altered_Consciousness":"😴","07_Abdominal_Pain":"😣",
   "08_Nausea_Vomiting":"🤮","09_Weakness":"🪫","10_General_Fatigue":"😵"
 };
 function renderHome(){
@@ -189,7 +191,11 @@ function renderHome(){
       <div class="nm">${SYM_JA[s]}</div>
       <div class="pg">${dn}/${tot}${done?' ✓':''}</div></div>`;
   }).join('');
-  hv.innerHTML=`<div class="homeTitle">🩺 症候を選択してください<br><span style="font-size:13px;color:var(--muted);font-weight:400">Select a chief complaint to start training</span></div><div class="symgrid">${grid}</div>`;
+  hv.innerHTML=`
+    <div class="homeIntro">救急現場で外国語対応が必要な救急隊員のための<b>英語スピーキング練習ツール</b>です。
+    コーパス言語学（共起分析・MI）と救急専門医の監修で選定した表現を、<b>音声認識で「通じる」</b>を体感しながら練習します（多少の発音差でもOK）。</div>
+    <div class="homeTitle">🩺 症候を選択してください<br><span style="font-size:13px;color:var(--muted);font-weight:400">Select a chief complaint to start training</span></div>
+    <div class="symgrid">${grid}</div>`;
   hv.querySelectorAll('[data-sym]').forEach(c=>c.onclick=()=>{
     curGroup=c.dataset.sym; curPhase=(phasesPresent(curGroup)[0]||1); view='train'; window.scrollTo(0,0); render();
   });
