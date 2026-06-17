@@ -68,7 +68,7 @@ assistance of **Anthropic's Claude Code**.
 1. **Initial Contact** — 初期接触
 2. **Chief Complaint** — 主訴聴取
 3. **History of Present Illness** — 病歴聴取
-4. **SAMPLE History** — 既往歴などの聴取
+4. **Past History** — 既往歴など聴取
 5. **Physical Assessment** — 身体評価
 6. **Instructions** — 指示
 7. **Reassurance** — 安心づけ

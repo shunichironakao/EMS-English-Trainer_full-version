@@ -60,6 +60,8 @@ button.act{border:none;border-radius:10px;padding:10px 16px;font-size:14px;font-
 .verdict{font-size:18px;font-weight:800;margin-top:6px}
 .verdict.ok{color:var(--ok)}
 .verdict.no{color:var(--warn)}
+.patient{margin-top:8px;padding:8px 12px;border-left:3px solid var(--accent);background:var(--panel2);border-radius:0 8px 8px 0;font-size:14px}
+.patient b{color:#fff}
 .kw{display:inline-block;padding:1px 8px;border-radius:6px;margin:2px;font-size:13px}
 .kw.hit{background:var(--okbg);color:#86efac;border:1px solid #166534}
 .kw.miss{background:var(--badbg);color:#fca5a5;border:1px solid #7f1d1d}
@@ -326,13 +328,14 @@ function pickVoice(lang){
   for(const name of prefer){ const v=pool.find(v=>(v.name||'').includes(name)); if(v) return v; }
   return pool[0]||null;
 }
-function speak(id){
-  const item=EXPRESSIONS.find(e=>e.id===id); if(!item)return;
-  const u=new SpeechSynthesisUtterance(item.target); u.rate=.9;
+function speakText(text){
+  if(!text) return;
+  const u=new SpeechSynthesisUtterance(text); u.rate=.9;
   const v=pickVoice(document.getElementById('accent').value);
   if(v){ u.voice=v; u.lang=v.lang; } else { u.lang=document.getElementById('accent').value; }
   speechSynthesis.cancel(); speechSynthesis.speak(u);
 }
+function speak(id){ const item=EXPRESSIONS.find(e=>e.id===id); if(item) speakText(item.target); }
 // 録音は「無音で自動停止」。文中の短いポーズ(<沈黙判定)では切れず、
 // 話し終えて一定の無音が続くと自動で確定する。手動停止も可。
 let S=null;                 // 現在の録音セッション
@@ -392,12 +395,23 @@ function showResult(id,text,j){
   const thr=parseFloat(document.getElementById('sens').value);
   const ok = j.score>=thr;
   const kwHtml=[...j.hits.map(k=>`<span class="kw hit">${k} ✓</span>`),...j.miss.map(k=>`<span class="kw miss">${k} ?</span>`)].join('');
+  // 成功時: 患者の返答を表示(動作のト書きは括弧表記、それ以外は音声再生)
+  let patientHtml='';
+  if(ok && item.patient){
+    const isAction=/^\s*\(/.test(item.patient);
+    patientHtml=`<div class="patient">${isAction?'🧑‍⚕️→🧍':'🗣 患者'}: <b>${item.patient}</b>　<span style="color:var(--muted)">${item.patient_ja||''}</span></div>`;
+  }
   res.innerHTML=`<div class="heard">認識: <b>${text}</b></div>
     <div class="verdict ${ok?'ok':'no'}">${ok?'✅ 通じました！':'🔁 もう一度 — 伝わった度 '+Math.round(j.score*100)+'%'}</div>
     <div style="margin-top:6px">${kwHtml}</div>
-    ${ok?'<div class="meta" style="margin-top:4px;color:#86efac">発音が多少違っても意味は伝わりました 👍</div>':'<div class="meta" style="margin-top:4px">? のキーワードを意識してもう一度どうぞ</div>'}`;
-  if(ok && !progress[id]){ progress[id]=true; localStorage.setItem('ems_progress',JSON.stringify(progress));
-    document.getElementById('card_'+id).classList.add('done'); }
+    ${ok?'<div class="meta" style="margin-top:4px;color:#86efac">発音が多少違っても意味は伝わりました 👍</div>':'<div class="meta" style="margin-top:4px">? のキーワードを意識してもう一度どうぞ</div>'}
+    ${patientHtml}`;
+  if(ok){
+    // 患者の返答を音声で再生(ト書き「(...)」は再生しない)
+    if(item.patient && !/^\s*\(/.test(item.patient)) setTimeout(()=>speakText(item.patient), 250);
+    if(!progress[id]){ progress[id]=true; localStorage.setItem('ems_progress',JSON.stringify(progress));
+      document.getElementById('card_'+id).classList.add('done'); }
+  }
   updateProgress();
 }
 

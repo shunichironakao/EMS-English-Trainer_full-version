@@ -1,5 +1,5 @@
 // 自動生成: 救急英語 10症候別×8フェーズ 学習データ (動画台本の救急隊員セリフ由来)
-const PHASES = [{"n": 1, "name": "初期接触", "en": "Initial Contact"}, {"n": 2, "name": "主訴聴取", "en": "Chief Complaint"}, {"n": 3, "name": "病歴聴取", "en": "History of Present Illness"}, {"n": 4, "name": "既往歴などの聴取", "en": "SAMPLE History"}, {"n": 5, "name": "身体評価", "en": "Physical Assessment"}, {"n": 6, "name": "指示", "en": "Instructions"}, {"n": 7, "name": "安心づけ", "en": "Reassurance"}, {"n": 8, "name": "搬送", "en": "Transport"}];
+const PHASES = [{"n": 1, "name": "初期接触", "en": "Initial Contact"}, {"n": 2, "name": "主訴聴取", "en": "Chief Complaint"}, {"n": 3, "name": "病歴聴取", "en": "History of Present Illness"}, {"n": 4, "name": "既往歴など聴取", "en": "Past History"}, {"n": 5, "name": "身体評価", "en": "Physical Assessment"}, {"n": 6, "name": "指示", "en": "Instructions"}, {"n": 7, "name": "安心づけ", "en": "Reassurance"}, {"n": 8, "name": "搬送", "en": "Transport"}];
 const EXPRESSIONS = [
  {
   "id": "01_Chest_Pain__1",
@@ -11,6 +11,8 @@ const EXPRESSIONS = [
   "adopted": false,
   "prompt_ja": "こんにちは、救急隊員です。",
   "target": "Hello, I'm a paramedic.",
+  "patient": "My chest really hurts.",
+  "patient_ja": "胸がとても痛いです。",
   "acceptable": [
    "Hello, I'm a paramedic."
   ],
@@ -30,6 +32,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "どうしましたか？",
   "target": "What happened?",
+  "patient": "I was watching TV and my chest suddenly got tight.",
+  "patient_ja": "テレビを見ていたら急に胸が締めつけられて。",
   "acceptable": [
    "What happened?"
   ],
@@ -49,6 +53,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "相棒がバイタルを測ります。",
   "target": "My partner will get your vitals.",
+  "patient": "Okay.",
+  "patient_ja": "はい。",
   "acceptable": [
    "My partner will get your vitals."
   ],
@@ -69,6 +75,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "どのくらい前ですか？",
   "target": "How long ago?",
+  "patient": "About thirty minutes ago.",
+  "patient_ja": "30分くらい前です。",
   "acceptable": [
    "How long ago?"
   ],
@@ -89,6 +97,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "痛みはどこですか？",
   "target": "Where is the pain?",
+  "patient": "Right here, in the center of my chest.",
+  "patient_ja": "ここ、胸の真ん中です。",
   "acceptable": [
    "Where is the pain?"
   ],
@@ -108,6 +118,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "痛みはどのくらい？(0〜10)",
   "target": "How bad is the pain, zero to ten?",
+  "patient": "About eight.",
+  "patient_ja": "8くらいです。",
   "acceptable": [
    "How bad is the pain, zero to ten?"
   ],
@@ -130,6 +142,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "鋭い・鈍い・圧迫感・灼熱感、どれですか？",
   "target": "Is it sharp, dull, pressure, or burning?",
+  "patient": "Like pressure — something heavy on my chest.",
+  "patient_ja": "重いものに押される圧迫感です。",
   "acceptable": [
    "Is it sharp, dull, pressure, or burning?"
   ],
@@ -151,6 +165,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "どこかに広がりますか？",
   "target": "Does it go anywhere?",
+  "patient": "Yes, to my left arm and jaw.",
+  "patient_ja": "はい、左腕とあごに。",
   "acceptable": [
    "Does it go anywhere?"
   ],
@@ -169,6 +185,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "吐き気や息切れはありますか？",
   "target": "Any nausea or shortness of breath?",
+  "patient": "Yes, some nausea and short of breath.",
+  "patient_ja": "はい、少し吐き気と息苦しさが。",
   "acceptable": [
    "Any nausea or shortness of breath?"
   ],
@@ -189,6 +207,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "持病はありますか？",
   "target": "What medical problems do you have?",
+  "patient": "High blood pressure.",
+  "patient_ja": "高血圧です。",
   "acceptable": [
    "What medical problems do you have?"
   ],
@@ -209,6 +229,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "以前にもありましたか？",
   "target": "Have you had this before?",
+  "patient": "No, never like this.",
+  "patient_ja": "いいえ、こんなのは初めてです。",
   "acceptable": [
    "Have you had this before?"
   ],
@@ -227,6 +249,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "心臓の問題はありますか？",
   "target": "Do you have any heart problems?",
+  "patient": "I have high blood pressure.",
+  "patient_ja": "高血圧があります。",
   "acceptable": [
    "Do you have any heart problems?"
   ],
@@ -246,6 +270,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "抗凝固薬は飲んでいますか？",
   "target": "Any blood thinners?",
+  "patient": "No.",
+  "patient_ja": "いいえ。",
   "acceptable": [
    "Any blood thinners?"
   ],
@@ -265,6 +291,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "アレルギーは？",
   "target": "Any allergies?",
+  "patient": "No allergies.",
+  "patient_ja": "ありません。",
   "acceptable": [
    "Any allergies?"
   ],
@@ -283,6 +311,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "どんな薬を飲んでいますか？",
   "target": "What medications do you take?",
+  "patient": "Just one for blood pressure.",
+  "patient_ja": "血圧の薬だけです。",
   "acceptable": [
    "What medications do you take?"
   ],
@@ -303,6 +333,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "最後に食べたのはいつ？",
   "target": "When did you last eat?",
+  "patient": "This morning.",
+  "patient_ja": "今朝です。",
   "acceptable": [
    "When did you last eat?"
   ],
@@ -323,6 +355,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "心電図で心臓を確認します。",
   "target": "Let me check your heart with an EKG.",
+  "patient": "Okay.",
+  "patient_ja": "わかりました。",
   "acceptable": [
    "Let me check your heart with an EKG."
   ],
@@ -345,6 +379,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "呼吸音を聴きます。",
   "target": "Let me listen to your breathing.",
+  "patient": "(takes a deep breath)",
+  "patient_ja": "（深呼吸する）",
   "acceptable": [
    "Let me listen to your breathing."
   ],
@@ -365,6 +401,8 @@ const EXPRESSIONS = [
   "adopted": false,
   "prompt_ja": "酸素を投与します。",
   "target": "I'm going to give you some oxygen.",
+  "patient": "Alright.",
+  "patient_ja": "はい。",
   "acceptable": [
    "I'm going to give you some oxygen."
   ],
@@ -383,8 +421,10 @@ const EXPRESSIONS = [
   "phase": 7,
   "tag": "安心づけ",
   "adopted": true,
-  "prompt_ja": "安心させる",
+  "prompt_ja": "しっかり対応します、ご安心ください。",
   "target": "We're going to take good care of you.",
+  "patient": "Thank you.",
+  "patient_ja": "ありがとうございます。",
   "acceptable": [
    "We're going to take good care of you."
   ],
@@ -406,6 +446,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "病院へ搬送します。",
   "target": "We're taking you to the hospital.",
+  "patient": "Okay, thank you.",
+  "patient_ja": "はい、お願いします。",
   "acceptable": [
    "We're taking you to the hospital."
   ],
@@ -425,6 +467,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "救急隊員です。息がしづらいですか？",
   "target": "Hi, I'm a paramedic. Are you having trouble breathing?",
+  "patient": "Yes… I can't catch my breath.",
+  "patient_ja": "はい…息が吸えなくて。",
   "acceptable": [
    "Hi, I'm a paramedic. Are you having trouble breathing?"
   ],
@@ -444,8 +488,10 @@ const EXPRESSIONS = [
   "phase": 2,
   "tag": "主訴聴取",
   "adopted": true,
-  "prompt_ja": "状況を尋ねる",
+  "prompt_ja": "どうされましたか？",
   "target": "Can you tell me what's going on?",
+  "patient": "I can't catch my breath.",
+  "patient_ja": "息が苦しいです。",
   "acceptable": [
    "Can you tell me what's going on?"
   ],
@@ -466,6 +512,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "相棒がバイタルを測ります。",
   "target": "My partner will get your vitals.",
+  "patient": "Okay.",
+  "patient_ja": "はい。",
   "acceptable": [
    "My partner will get your vitals."
   ],
@@ -486,6 +534,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "いつから始まりましたか？",
   "target": "How long ago did it start?",
+  "patient": "About an hour ago.",
+  "patient_ja": "1時間くらい前です。",
   "acceptable": [
    "How long ago did it start?"
   ],
@@ -507,6 +557,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "息苦しさはどのくらい？(0〜10)",
   "target": "How bad is your breathing, zero to ten?",
+  "patient": "Maybe seven.",
+  "patient_ja": "7くらいです。",
   "acceptable": [
    "How bad is your breathing, zero to ten?"
   ],
@@ -529,6 +581,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "胸の痛みは？",
   "target": "Any chest pain?",
+  "patient": "No, just tightness.",
+  "patient_ja": "いいえ、締めつけ感だけです。",
   "acceptable": [
    "Any chest pain?"
   ],
@@ -548,6 +602,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "持病はありますか？",
   "target": "What medical problems do you have?",
+  "patient": "I have asthma, since I was a child.",
+  "patient_ja": "喘息があります、子どもの頃から。",
   "acceptable": [
    "What medical problems do you have?"
   ],
@@ -568,6 +624,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "吸入器は使いましたか？",
   "target": "Did you use your inhaler?",
+  "patient": "Yes, twice, but it didn't help much.",
+  "patient_ja": "はい、2回。でもあまり効きませんでした。",
   "acceptable": [
    "Did you use your inhaler?"
   ],
@@ -587,6 +645,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "アレルギーは？",
   "target": "Any allergies?",
+  "patient": "Pollen, and some cats.",
+  "patient_ja": "花粉と猫です。",
   "acceptable": [
    "Any allergies?"
   ],
@@ -605,6 +665,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "どんな薬を飲んでいますか？",
   "target": "What medications do you take?",
+  "patient": "An inhaler, and one for allergies.",
+  "patient_ja": "吸入器とアレルギーの薬です。",
   "acceptable": [
    "What medications do you take?"
   ],
@@ -625,6 +687,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "呼吸の音を聴きます。",
   "target": "Let me listen to your breathing.",
+  "patient": "Okay.",
+  "patient_ja": "はい。",
   "acceptable": [
    "Let me listen to your breathing."
   ],
@@ -645,6 +709,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "ゆっくり深呼吸してください。",
   "target": "Try to take slow, deep breaths.",
+  "patient": "I'll try.",
+  "patient_ja": "やってみます。",
   "acceptable": [
    "Try to take slow, deep breaths."
   ],
@@ -667,6 +733,8 @@ const EXPRESSIONS = [
   "adopted": false,
   "prompt_ja": "酸素を投与します。",
   "target": "I'm going to give you some oxygen.",
+  "patient": "Thank you.",
+  "patient_ja": "ありがとうございます。",
   "acceptable": [
    "I'm going to give you some oxygen."
   ],
@@ -685,8 +753,10 @@ const EXPRESSIONS = [
   "phase": 7,
   "tag": "安心づけ",
   "adopted": true,
-  "prompt_ja": "安心させる",
+  "prompt_ja": "しっかり対応します、ご安心ください。",
   "target": "We're going to take good care of you.",
+  "patient": "Thank you.",
+  "patient_ja": "ありがとうございます。",
   "acceptable": [
    "We're going to take good care of you."
   ],
@@ -708,6 +778,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "病院へ搬送します。",
   "target": "We're taking you to the hospital.",
+  "patient": "Okay, thank you.",
+  "patient_ja": "はい、お願いします。",
   "acceptable": [
    "We're taking you to the hospital."
   ],
@@ -727,6 +799,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "救急隊員です。今日はどうされましたか？",
   "target": "Hello, I'm a paramedic. What's going on today?",
+  "patient": "I felt dizzy and almost fell.",
+  "patient_ja": "めまいがして転びそうになりました。",
   "acceptable": [
    "Hello, I'm a paramedic. What's going on today?"
   ],
@@ -747,8 +821,10 @@ const EXPRESSIONS = [
   "phase": 2,
   "tag": "主訴聴取",
   "adopted": true,
-  "prompt_ja": "状況を尋ねる",
+  "prompt_ja": "どうされましたか？",
   "target": "Can you tell me what's going on?",
+  "patient": "I feel dizzy.",
+  "patient_ja": "めまいがします。",
   "acceptable": [
    "Can you tell me what's going on?"
   ],
@@ -769,6 +845,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "相棒がバイタルを測ります。",
   "target": "My partner will get your vitals.",
+  "patient": "Okay.",
+  "patient_ja": "はい。",
   "acceptable": [
    "My partner will get your vitals."
   ],
@@ -789,6 +867,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "めまいはいつ始まりましたか？",
   "target": "When did this dizziness start?",
+  "patient": "When I stood up, a few minutes ago.",
+  "patient_ja": "数分前、立ち上がった時です。",
   "acceptable": [
    "When did this dizziness start?"
   ],
@@ -809,6 +889,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "周りが回る感じは？",
   "target": "Do you feel the room spinning?",
+  "patient": "Lightheaded, like I might pass out.",
+  "patient_ja": "ふらっとして、気が遠くなりそうです。",
   "acceptable": [
    "Do you feel the room spinning?"
   ],
@@ -829,6 +911,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "めまいはどのくらい？(0〜10)",
   "target": "How bad is the dizziness, zero to ten?",
+  "patient": "About six.",
+  "patient_ja": "6くらいです。",
   "acceptable": [
    "How bad is the dizziness, zero to ten?"
   ],
@@ -851,6 +935,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "今日、転んだり頭を打ちましたか？",
   "target": "Did you fall or hit your head today?",
+  "patient": "No, I held on to the chair.",
+  "patient_ja": "いいえ、椅子につかまりました。",
   "acceptable": [
    "Did you fall or hit your head today?"
   ],
@@ -872,6 +958,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "吐き気や嘔吐は？",
   "target": "Any nausea or vomiting?",
+  "patient": "A little nausea.",
+  "patient_ja": "少し吐き気が。",
   "acceptable": [
    "Any nausea or vomiting?"
   ],
@@ -891,6 +979,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "持病はありますか？",
   "target": "What medical problems do you have?",
+  "patient": "High blood pressure.",
+  "patient_ja": "高血圧です。",
   "acceptable": [
    "What medical problems do you have?"
   ],
@@ -911,6 +1001,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "良いですね、正常です。お薬は飲んでいますか？",
   "target": "Good — that looks normal. Do you take any medications?",
+  "patient": "A water pill for blood pressure.",
+  "patient_ja": "血圧の利尿薬です。",
   "acceptable": [
    "Good — that looks normal. Do you take any medications?"
   ],
@@ -933,6 +1025,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "アレルギーは？",
   "target": "Any allergies?",
+  "patient": "None.",
+  "patient_ja": "ありません。",
   "acceptable": [
    "Any allergies?"
   ],
@@ -951,6 +1045,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "笑ってみてください。",
   "target": "Can you give me a big smile?",
+  "patient": "(smiles)",
+  "patient_ja": "（笑顔）",
   "acceptable": [
    "Can you give me a big smile?"
   ],
@@ -971,6 +1067,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "私の手を握って。両腕を上げて。",
   "target": "Squeeze my hands. Now raise both arms.",
+  "patient": "(squeezes and raises arms)",
+  "patient_ja": "（手を握り、両腕を上げる）",
   "acceptable": [
    "Squeeze my hands. Now raise both arms."
   ],
@@ -992,8 +1090,10 @@ const EXPRESSIONS = [
   "phase": 6,
   "tag": "指示",
   "adopted": true,
-  "prompt_ja": "そのまま動かないよう伝える",
+  "prompt_ja": "そのまま動かないでください。",
   "target": "Please stay still.",
+  "patient": "Okay.",
+  "patient_ja": "はい。",
   "acceptable": [
    "Please stay still."
   ],
@@ -1012,8 +1112,10 @@ const EXPRESSIONS = [
   "phase": 7,
   "tag": "安心づけ",
   "adopted": true,
-  "prompt_ja": "安心させる",
+  "prompt_ja": "しっかり対応します、ご安心ください。",
   "target": "We're going to take good care of you.",
+  "patient": "Thank you.",
+  "patient_ja": "ありがとうございます。",
   "acceptable": [
    "We're going to take good care of you."
   ],
@@ -1035,6 +1137,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "心臓を確認し、病院へ搬送します。",
   "target": "We'll check your heart. Then take you to the hospital.",
+  "patient": "Alright, thank you.",
+  "patient_ja": "はい、ありがとうございます。",
   "acceptable": [
    "We'll check your heart. Then take you to the hospital."
   ],
@@ -1057,6 +1161,8 @@ const EXPRESSIONS = [
   "adopted": false,
   "prompt_ja": "救急隊員です。",
   "target": "Hi, I'm a paramedic.",
+  "patient": "My head hurts badly.",
+  "patient_ja": "頭がひどく痛みます。",
   "acceptable": [
    "Hi, I'm a paramedic."
   ],
@@ -1075,6 +1181,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "どうしましたか？",
   "target": "What happened?",
+  "patient": "I slipped and hit my head, then the headache started.",
+  "patient_ja": "滑って頭を打って、その後頭痛が始まりました。",
   "acceptable": [
    "What happened?"
   ],
@@ -1094,6 +1202,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "相棒がバイタルを測ります。",
   "target": "My partner will get your vitals.",
+  "patient": "Okay.",
+  "patient_ja": "はい。",
   "acceptable": [
    "My partner will get your vitals."
   ],
@@ -1114,6 +1224,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "いつ起きましたか？",
   "target": "When did this happen?",
+  "patient": "About twenty minutes ago.",
+  "patient_ja": "20分くらい前です。",
   "acceptable": [
    "When did this happen?"
   ],
@@ -1133,6 +1245,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "頭痛はどのくらい？(0〜10)",
   "target": "How bad is the headache, zero to ten?",
+  "patient": "Nine. It's the worst I've ever had.",
+  "patient_ja": "9。これまでで一番ひどいです。",
   "acceptable": [
    "How bad is the headache, zero to ten?"
   ],
@@ -1155,6 +1269,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "その後気を失いましたか？",
   "target": "Did you pass out afterward?",
+  "patient": "Maybe for a few seconds.",
+  "patient_ja": "数秒間、たぶん。",
   "acceptable": [
    "Did you pass out afterward?"
   ],
@@ -1175,6 +1291,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "吐き気・嘔吐・見え方の変化は？",
   "target": "Any nausea, vomiting, or vision changes?",
+  "patient": "I vomited once, and my vision is blurry.",
+  "patient_ja": "一度吐いて、視界がぼやけます。",
   "acceptable": [
    "Any nausea, vomiting, or vision changes?"
   ],
@@ -1196,6 +1314,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "持病はありますか？",
   "target": "What medical problems do you have?",
+  "patient": "None.",
+  "patient_ja": "ありません。",
   "acceptable": [
    "What medical problems do you have?"
   ],
@@ -1216,6 +1336,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "抗凝固薬は飲んでいますか？",
   "target": "Do you take any blood thinners?",
+  "patient": "Yes, warfarin.",
+  "patient_ja": "はい、ワルファリンです。",
   "acceptable": [
    "Do you take any blood thinners?"
   ],
@@ -1236,6 +1358,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "アレルギーは？",
   "target": "Any allergies?",
+  "patient": "No.",
+  "patient_ja": "いいえ。",
   "acceptable": [
    "Any allergies?"
   ],
@@ -1254,6 +1378,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "笑ってみてください。",
   "target": "Can you give me a big smile?",
+  "patient": "(smiles)",
+  "patient_ja": "（笑顔）",
   "acceptable": [
    "Can you give me a big smile?"
   ],
@@ -1274,6 +1400,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "両腕を上げてください。",
   "target": "Raise both your arms.",
+  "patient": "(the right arm drifts down)",
+  "patient_ja": "（右腕が下がる）",
   "acceptable": [
    "Raise both your arms."
   ],
@@ -1292,8 +1420,10 @@ const EXPRESSIONS = [
   "phase": 6,
   "tag": "指示",
   "adopted": true,
-  "prompt_ja": "そのまま動かないよう伝える",
+  "prompt_ja": "そのまま動かないでください。",
   "target": "Please stay still.",
+  "patient": "Okay.",
+  "patient_ja": "はい。",
   "acceptable": [
    "Please stay still."
   ],
@@ -1314,6 +1444,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "なるべく揺れないように搬送します。",
   "target": "We'll give you a smooth, gentle ride.",
+  "patient": "Thank you.",
+  "patient_ja": "ありがとうございます。",
   "acceptable": [
    "We'll give you a smooth, gentle ride."
   ],
@@ -1335,6 +1467,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "病院へ搬送します。",
   "target": "We're taking you to the hospital.",
+  "patient": "Okay, thank you.",
+  "patient_ja": "はい、お願いします。",
   "acceptable": [
    "We're taking you to the hospital."
   ],
@@ -1354,6 +1488,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "救急隊員です。どうしましたか？",
   "target": "Hello, I'm a paramedic. What happened?",
+  "patient": "I lifted something heavy and my back gave out.",
+  "patient_ja": "重い物を持ち上げたら腰が抜けました。",
   "acceptable": [
    "Hello, I'm a paramedic. What happened?"
   ],
@@ -1373,8 +1509,10 @@ const EXPRESSIONS = [
   "phase": 2,
   "tag": "主訴聴取",
   "adopted": true,
-  "prompt_ja": "状況を尋ねる",
+  "prompt_ja": "どうされましたか？",
   "target": "Can you tell me what's going on?",
+  "patient": "My back hurts.",
+  "patient_ja": "背中が痛みます。",
   "acceptable": [
    "Can you tell me what's going on?"
   ],
@@ -1395,6 +1533,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "相棒がバイタルを測ります。",
   "target": "My partner will get your vitals.",
+  "patient": "Okay.",
+  "patient_ja": "はい。",
   "acceptable": [
    "My partner will get your vitals."
   ],
@@ -1415,6 +1555,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "背中の痛みはいつ始まりましたか？",
   "target": "When did your back pain start?",
+  "patient": "About an hour ago.",
+  "patient_ja": "1時間くらい前です。",
   "acceptable": [
    "When did your back pain start?"
   ],
@@ -1436,6 +1578,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "痛むところを指さしてください。",
   "target": "Can you point to where it hurts?",
+  "patient": "Right here, in my lower back.",
+  "patient_ja": "ここ、腰の下の方です。",
   "acceptable": [
    "Can you point to where it hurts?"
   ],
@@ -1456,6 +1600,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "痛みはどのくらい？(0〜10)",
   "target": "How bad is the pain, zero to ten?",
+  "patient": "About seven.",
+  "patient_ja": "7くらいです。",
   "acceptable": [
    "How bad is the pain, zero to ten?"
   ],
@@ -1478,6 +1624,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "脚に広がりますか？",
   "target": "Does it spread to your legs?",
+  "patient": "A little into my right leg.",
+  "patient_ja": "少し右脚に。",
   "acceptable": [
    "Does it spread to your legs?"
   ],
@@ -1497,6 +1645,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "脚のしびれや力の入りにくさは？",
   "target": "Any numbness or weakness in your legs?",
+  "patient": "My right foot feels a bit numb.",
+  "patient_ja": "右足が少ししびれます。",
   "acceptable": [
    "Any numbness or weakness in your legs?"
   ],
@@ -1517,6 +1667,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "排尿・排便の障害は？",
   "target": "Any bladder or bowel problems?",
+  "patient": "No.",
+  "patient_ja": "いいえ。",
   "acceptable": [
    "Any bladder or bowel problems?"
   ],
@@ -1537,6 +1689,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "持病はありますか？",
   "target": "What medical problems do you have?",
+  "patient": "None.",
+  "patient_ja": "ありません。",
   "acceptable": [
    "What medical problems do you have?"
   ],
@@ -1557,6 +1711,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "アレルギーや内服薬は？",
   "target": "Any allergies or medications?",
+  "patient": "No allergies, just a vitamin.",
+  "patient_ja": "アレルギーなし、ビタミンだけです。",
   "acceptable": [
    "Any allergies or medications?"
   ],
@@ -1576,6 +1732,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "押すと痛いですか？",
   "target": "Does it hurt when I press here?",
+  "patient": "It hurts right there.",
+  "patient_ja": "そこが痛いです。",
   "acceptable": [
    "Does it hurt when I press here?"
   ],
@@ -1597,6 +1755,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "呼吸音を聴きます。",
   "target": "Let me listen to your breathing.",
+  "patient": "(takes a deep breath)",
+  "patient_ja": "（深呼吸する）",
   "acceptable": [
    "Let me listen to your breathing."
   ],
@@ -1617,6 +1777,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "腹部を触診します。",
   "target": "I'm going to gently feel your stomach.",
+  "patient": "Okay.",
+  "patient_ja": "はい。",
   "acceptable": [
    "I'm going to gently feel your stomach."
   ],
@@ -1636,8 +1798,10 @@ const EXPRESSIONS = [
   "phase": 6,
   "tag": "指示",
   "adopted": true,
-  "prompt_ja": "そのまま動かないよう伝える",
+  "prompt_ja": "そのまま動かないでください。",
   "target": "Please stay still.",
+  "patient": "Okay.",
+  "patient_ja": "はい。",
   "acceptable": [
    "Please stay still."
   ],
@@ -1656,8 +1820,10 @@ const EXPRESSIONS = [
   "phase": 7,
   "tag": "安心づけ",
   "adopted": true,
-  "prompt_ja": "安心させる",
+  "prompt_ja": "しっかり対応します、ご安心ください。",
   "target": "We're going to take good care of you.",
+  "patient": "Thank you.",
+  "patient_ja": "ありがとうございます。",
   "acceptable": [
    "We're going to take good care of you."
   ],
@@ -1679,6 +1845,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "病院へ搬送します。",
   "target": "We'll take you to the hospital.",
+  "patient": "Thank you.",
+  "patient_ja": "ありがとうございます。",
   "acceptable": [
    "We'll take you to the hospital."
   ],
@@ -1698,6 +1866,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "聞こえますか？目を開けてください。",
   "target": "Can you hear me? Open your eyes.",
+  "patient": "(no clear response)",
+  "patient_ja": "（はっきりした反応なし）",
   "acceptable": [
    "Can you hear me? Open your eyes."
   ],
@@ -1718,6 +1888,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "普段ははっきり話せますか？",
   "target": "Is she usually alert and talking?",
+  "patient": "Yes, normally she's sharp and talks fine.",
+  "patient_ja": "はい、普段はしっかりしています。",
   "acceptable": [
    "Is she usually alert and talking?"
   ],
@@ -1737,8 +1909,10 @@ const EXPRESSIONS = [
   "phase": 2,
   "tag": "主訴聴取",
   "adopted": true,
-  "prompt_ja": "状況を尋ねる",
+  "prompt_ja": "どうされましたか？",
   "target": "Can you tell me what's going on?",
+  "patient": "She seems confused.",
+  "patient_ja": "様子がおかしいんです。",
   "acceptable": [
    "Can you tell me what's going on?"
   ],
@@ -1759,6 +1933,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "バイタルを確認します。",
   "target": "Let me check her vitals.",
+  "patient": "Okay.",
+  "patient_ja": "はい。",
   "acceptable": [
    "Let me check her vitals."
   ],
@@ -1780,6 +1956,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "今日はどうされましたか？",
   "target": "What happened today?",
+  "patient": "I'm her daughter. She's been confused since this morning.",
+  "patient_ja": "娘です。今朝から様子がおかしくて。",
   "acceptable": [
    "What happened today?"
   ],
@@ -1800,6 +1978,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "最近の転倒やけがは？",
   "target": "Any recent falls or injuries?",
+  "patient": "No falls.",
+  "patient_ja": "転倒はありません。",
   "acceptable": [
    "Any recent falls or injuries?"
   ],
@@ -1820,6 +2000,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "持病はありますか？",
   "target": "Does she have any medical problems?",
+  "patient": "Diabetes and high blood pressure.",
+  "patient_ja": "糖尿病と高血圧です。",
   "acceptable": [
    "Does she have any medical problems?"
   ],
@@ -1840,6 +2022,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "アレルギーは？どんな薬を飲んでいますか？",
   "target": "Any allergies? What medications does she take?",
+  "patient": "No allergies. Pills for diabetes and blood pressure.",
+  "patient_ja": "アレルギーなし。糖尿病と血圧の薬です。",
   "acceptable": [
    "Any allergies? What medications does she take?"
   ],
@@ -1862,6 +2046,8 @@ const EXPRESSIONS = [
   "adopted": false,
   "prompt_ja": "酸素と血糖を確認します。",
   "target": "We'll give oxygen and check blood sugar.",
+  "patient": "Please help her.",
+  "patient_ja": "助けてください。",
   "acceptable": [
    "We'll give oxygen and check blood sugar."
   ],
@@ -1884,6 +2070,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "呼吸音を聴きます。",
   "target": "Let me listen to her breathing.",
+  "patient": "(she breathes slowly)",
+  "patient_ja": "（ゆっくり呼吸する）",
   "acceptable": [
    "Let me listen to her breathing."
   ],
@@ -1903,8 +2091,10 @@ const EXPRESSIONS = [
   "phase": 6,
   "tag": "指示",
   "adopted": true,
-  "prompt_ja": "そのまま動かないよう伝える",
+  "prompt_ja": "そのまま動かないでください。",
   "target": "Please stay still.",
+  "patient": "Okay.",
+  "patient_ja": "はい。",
   "acceptable": [
    "Please stay still."
   ],
@@ -1923,8 +2113,10 @@ const EXPRESSIONS = [
   "phase": 7,
   "tag": "安心づけ",
   "adopted": true,
-  "prompt_ja": "安心させる",
+  "prompt_ja": "しっかり対応します、ご安心ください。",
   "target": "We're going to take good care of you.",
+  "patient": "Thank you.",
+  "patient_ja": "ありがとうございます。",
   "acceptable": [
    "We're going to take good care of you."
   ],
@@ -1946,6 +2138,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "病院へ搬送します。",
   "target": "We'll take her to the hospital.",
+  "patient": "Thank you.",
+  "patient_ja": "ありがとうございます。",
   "acceptable": [
    "We'll take her to the hospital."
   ],
@@ -1966,6 +2160,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "救急隊員です。今日はどうされましたか？",
   "target": "Hi, I'm a paramedic. What's going on today?",
+  "patient": "My stomach really hurts.",
+  "patient_ja": "お腹がとても痛いです。",
   "acceptable": [
    "Hi, I'm a paramedic. What's going on today?"
   ],
@@ -1985,8 +2181,10 @@ const EXPRESSIONS = [
   "phase": 2,
   "tag": "主訴聴取",
   "adopted": true,
-  "prompt_ja": "状況を尋ねる",
+  "prompt_ja": "どうされましたか？",
   "target": "Can you tell me what's going on?",
+  "patient": "My stomach hurts.",
+  "patient_ja": "お腹が痛いです。",
   "acceptable": [
    "Can you tell me what's going on?"
   ],
@@ -2007,6 +2205,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "バイタルを確認します。",
   "target": "Let me check your vitals.",
+  "patient": "Okay.",
+  "patient_ja": "はい。",
   "acceptable": [
    "Let me check your vitals."
   ],
@@ -2027,6 +2227,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "腹痛はいつ始まりましたか？",
   "target": "When did your stomach pain start?",
+  "patient": "Since last night.",
+  "patient_ja": "昨夜からです。",
   "acceptable": [
    "When did your stomach pain start?"
   ],
@@ -2048,6 +2250,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "痛むところを指さしてください。",
   "target": "Can you point to where it hurts?",
+  "patient": "All around my belly button.",
+  "patient_ja": "おへその周り全体です。",
   "acceptable": [
    "Can you point to where it hurts?"
   ],
@@ -2068,6 +2272,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "痛みはどのくらい？(0〜10)",
   "target": "How bad is the pain, zero to ten?",
+  "patient": "About six.",
+  "patient_ja": "6くらいです。",
   "acceptable": [
    "How bad is the pain, zero to ten?"
   ],
@@ -2090,6 +2296,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "吐き気や嘔吐は？",
   "target": "Any nausea or vomiting?",
+  "patient": "Yes, I vomited twice and have diarrhea.",
+  "patient_ja": "はい、2回吐いて下痢もあります。",
   "acceptable": [
    "Any nausea or vomiting?"
   ],
@@ -2109,6 +2317,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "吐物や便に血は？",
   "target": "Any blood in your vomit or stool?",
+  "patient": "No blood.",
+  "patient_ja": "血はありません。",
   "acceptable": [
    "Any blood in your vomit or stool?"
   ],
@@ -2129,6 +2339,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "熱はありますか？",
   "target": "Any fever?",
+  "patient": "Yes, since this morning.",
+  "patient_ja": "はい、今朝から。",
   "acceptable": [
    "Any fever?"
   ],
@@ -2147,6 +2359,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "持病はありますか？",
   "target": "What medical problems do you have?",
+  "patient": "None.",
+  "patient_ja": "ありません。",
   "acceptable": [
    "What medical problems do you have?"
   ],
@@ -2167,6 +2381,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "最後に飲食したのはいつ？",
   "target": "When did you last eat or drink?",
+  "patient": "I can't keep anything down.",
+  "patient_ja": "何も口にできていません。",
   "acceptable": [
    "When did you last eat or drink?"
   ],
@@ -2188,6 +2404,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "アレルギーや内服薬は？",
   "target": "Any allergies or medications?",
+  "patient": "No allergies, no medications.",
+  "patient_ja": "どちらもありません。",
   "acceptable": [
    "Any allergies or medications?"
   ],
@@ -2205,8 +2423,10 @@ const EXPRESSIONS = [
   "phase": 5,
   "tag": "身体評価",
   "adopted": true,
-  "prompt_ja": "腹部を触診する",
+  "prompt_ja": "お腹を触診します。",
   "target": "I'm going to gently feel your stomach.",
+  "patient": "Okay.",
+  "patient_ja": "はい。",
   "acceptable": [
    "I'm going to gently feel your stomach."
   ],
@@ -2226,8 +2446,10 @@ const EXPRESSIONS = [
   "phase": 6,
   "tag": "指示",
   "adopted": true,
-  "prompt_ja": "そのまま動かないよう伝える",
+  "prompt_ja": "そのまま動かないでください。",
   "target": "Please stay still.",
+  "patient": "Okay.",
+  "patient_ja": "はい。",
   "acceptable": [
    "Please stay still."
   ],
@@ -2246,8 +2468,10 @@ const EXPRESSIONS = [
   "phase": 7,
   "tag": "安心づけ",
   "adopted": true,
-  "prompt_ja": "安心させる",
+  "prompt_ja": "しっかり対応します、ご安心ください。",
   "target": "We're going to take good care of you.",
+  "patient": "Thank you.",
+  "patient_ja": "ありがとうございます。",
   "acceptable": [
    "We're going to take good care of you."
   ],
@@ -2269,6 +2493,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "病院へ搬送します。",
   "target": "We're taking you to the hospital.",
+  "patient": "Okay, thank you.",
+  "patient_ja": "はい、お願いします。",
   "acceptable": [
    "We're taking you to the hospital."
   ],
@@ -2288,6 +2514,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "救急隊員です。具合はいかがですか？",
   "target": "Hello, I'm a paramedic. How are you feeling?",
+  "patient": "I keep throwing up.",
+  "patient_ja": "何度も吐いてしまいます。",
   "acceptable": [
    "Hello, I'm a paramedic. How are you feeling?"
   ],
@@ -2307,8 +2535,10 @@ const EXPRESSIONS = [
   "phase": 2,
   "tag": "主訴聴取",
   "adopted": true,
-  "prompt_ja": "状況を尋ねる",
+  "prompt_ja": "どうされましたか？",
   "target": "Can you tell me what's going on?",
+  "patient": "I keep throwing up.",
+  "patient_ja": "何度も吐いてしまいます。",
   "acceptable": [
    "Can you tell me what's going on?"
   ],
@@ -2329,6 +2559,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "バイタルを確認します。",
   "target": "Let me check your vitals.",
+  "patient": "Okay.",
+  "patient_ja": "はい。",
   "acceptable": [
    "Let me check your vitals."
   ],
@@ -2349,6 +2581,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "吐き気はいつ始まりましたか？",
   "target": "When did your nausea start?",
+  "patient": "A few hours ago, after drinking.",
+  "patient_ja": "飲んだ後、数時間前からです。",
   "acceptable": [
    "When did your nausea start?"
   ],
@@ -2369,6 +2603,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "何回吐きましたか？",
   "target": "How many times have you vomited?",
+  "patient": "About five times.",
+  "patient_ja": "5回くらいです。",
   "acceptable": [
    "How many times have you vomited?"
   ],
@@ -2390,6 +2626,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "吐物に血は混じっていましたか？",
   "target": "Any blood in your vomit?",
+  "patient": "No blood.",
+  "patient_ja": "血はありません。",
   "acceptable": [
    "Any blood in your vomit?"
   ],
@@ -2409,6 +2647,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "腹痛や胸の痛みは？",
   "target": "Any stomach pain or chest pain?",
+  "patient": "Just my stomach feels upset.",
+  "patient_ja": "胃がむかむかするだけです。",
   "acceptable": [
    "Any stomach pain or chest pain?"
   ],
@@ -2430,6 +2670,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "楽になる・悪化することはありますか？",
   "target": "Does anything make the nausea better or worse?",
+  "patient": "Lying still helps a little.",
+  "patient_ja": "じっとしていると少し楽です。",
   "acceptable": [
    "Does anything make the nausea better or worse?"
   ],
@@ -2452,6 +2694,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "頭を打ちましたか？",
   "target": "Did you hit your head?",
+  "patient": "No.",
+  "patient_ja": "いいえ。",
   "acceptable": [
    "Did you hit your head?"
   ],
@@ -2471,6 +2715,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "持病はありますか？",
   "target": "What medical problems do you have?",
+  "patient": "None.",
+  "patient_ja": "ありません。",
   "acceptable": [
    "What medical problems do you have?"
   ],
@@ -2491,6 +2737,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "アレルギーや内服薬は？",
   "target": "Any allergies or medications?",
+  "patient": "None.",
+  "patient_ja": "ありません。",
   "acceptable": [
    "Any allergies or medications?"
   ],
@@ -2510,6 +2758,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "両腕を上げてください。",
   "target": "Raise both your arms.",
+  "patient": "(raises both arms)",
+  "patient_ja": "（両腕を上げる）",
   "acceptable": [
    "Raise both your arms."
   ],
@@ -2530,6 +2780,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "腹部を触診します。",
   "target": "I'm going to gently feel your stomach.",
+  "patient": "Okay.",
+  "patient_ja": "はい。",
   "acceptable": [
    "I'm going to gently feel your stomach."
   ],
@@ -2549,8 +2801,10 @@ const EXPRESSIONS = [
   "phase": 6,
   "tag": "指示",
   "adopted": true,
-  "prompt_ja": "そのまま動かないよう伝える",
+  "prompt_ja": "そのまま動かないでください。",
   "target": "Please stay still.",
+  "patient": "Okay.",
+  "patient_ja": "はい。",
   "acceptable": [
    "Please stay still."
   ],
@@ -2569,8 +2823,10 @@ const EXPRESSIONS = [
   "phase": 7,
   "tag": "安心づけ",
   "adopted": true,
-  "prompt_ja": "安心させる",
+  "prompt_ja": "しっかり対応します、ご安心ください。",
   "target": "We're going to take good care of you.",
+  "patient": "Thank you.",
+  "patient_ja": "ありがとうございます。",
   "acceptable": [
    "We're going to take good care of you."
   ],
@@ -2592,6 +2848,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "これから病院へ搬送します。",
   "target": "We'll take you to the hospital now.",
+  "patient": "Thank you.",
+  "patient_ja": "ありがとうございます。",
   "acceptable": [
    "We'll take you to the hospital now."
   ],
@@ -2612,6 +2870,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "救急隊員です。どうされましたか？",
   "target": "Hello, I'm a paramedic. What's going on?",
+  "patient": "My right side feels weak.",
+  "patient_ja": "右半身に力が入りません。",
   "acceptable": [
    "Hello, I'm a paramedic. What's going on?"
   ],
@@ -2631,8 +2891,10 @@ const EXPRESSIONS = [
   "phase": 2,
   "tag": "主訴聴取",
   "adopted": true,
-  "prompt_ja": "状況を尋ねる",
+  "prompt_ja": "どうされましたか？",
   "target": "Can you tell me what's going on?",
+  "patient": "My right side feels weak.",
+  "patient_ja": "右半身に力が入りません。",
   "acceptable": [
    "Can you tell me what's going on?"
   ],
@@ -2653,6 +2915,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "バイタルを確認します。",
   "target": "Let me check your vitals.",
+  "patient": "Okay.",
+  "patient_ja": "はい。",
   "acceptable": [
    "Let me check your vitals."
   ],
@@ -2673,6 +2937,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "脱力はいつ始まりましたか？",
   "target": "When did this weakness start?",
+  "patient": "About forty minutes ago, suddenly.",
+  "patient_ja": "40分くらい前、突然です。",
   "acceptable": [
    "When did this weakness start?"
   ],
@@ -2693,6 +2959,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "最後に全く普通だったのはいつ？",
   "target": "When were you last completely normal?",
+  "patient": "Right before it started, around forty minutes ago.",
+  "patient_ja": "始まる直前、40分ほど前です。",
   "acceptable": [
    "When were you last completely normal?"
   ],
@@ -2714,6 +2982,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "頭痛や見え方の変化は？",
   "target": "Any headache or vision changes?",
+  "patient": "A slight headache.",
+  "patient_ja": "少し頭痛が。",
   "acceptable": [
    "Any headache or vision changes?"
   ],
@@ -2734,6 +3004,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "持病はありますか？",
   "target": "What medical problems do you have?",
+  "patient": "Atrial fibrillation.",
+  "patient_ja": "心房細動です。",
   "acceptable": [
    "What medical problems do you have?"
   ],
@@ -2754,6 +3026,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "抗凝固薬は飲んでいますか？",
   "target": "Do you take any blood thinners?",
+  "patient": "Yes, for an irregular heartbeat.",
+  "patient_ja": "はい、不整脈のために。",
   "acceptable": [
    "Do you take any blood thinners?"
   ],
@@ -2774,6 +3048,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "アレルギーは？",
   "target": "Any allergies?",
+  "patient": "None.",
+  "patient_ja": "ありません。",
   "acceptable": [
    "Any allergies?"
   ],
@@ -2792,6 +3068,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "笑ってみてください。",
   "target": "Can you give me a big smile?",
+  "patient": "(the right side of the mouth droops)",
+  "patient_ja": "（口の右側が下がる）",
   "acceptable": [
    "Can you give me a big smile?"
   ],
@@ -2812,6 +3090,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "両腕を上げて保ってください。",
   "target": "Raise both arms and hold them.",
+  "patient": "(the right arm drifts down)",
+  "patient_ja": "（右腕が下がる）",
   "acceptable": [
    "Raise both arms and hold them."
   ],
@@ -2832,8 +3112,10 @@ const EXPRESSIONS = [
   "phase": 6,
   "tag": "指示",
   "adopted": true,
-  "prompt_ja": "そのまま動かないよう伝える",
+  "prompt_ja": "そのまま動かないでください。",
   "target": "Please stay still.",
+  "patient": "Okay.",
+  "patient_ja": "はい。",
   "acceptable": [
    "Please stay still."
   ],
@@ -2852,8 +3134,10 @@ const EXPRESSIONS = [
   "phase": 7,
   "tag": "安心づけ",
   "adopted": true,
-  "prompt_ja": "安心させる",
+  "prompt_ja": "しっかり対応します、ご安心ください。",
   "target": "We're going to take good care of you.",
+  "patient": "Thank you.",
+  "patient_ja": "ありがとうございます。",
   "acceptable": [
    "We're going to take good care of you."
   ],
@@ -2875,6 +3159,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "脳卒中センターへ搬送します。",
   "target": "We're taking you to the stroke center now.",
+  "patient": "Please hurry.",
+  "patient_ja": "急いでください。",
   "acceptable": [
    "We're taking you to the stroke center now."
   ],
@@ -2896,6 +3182,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "救急隊員です。具合はいかがですか？",
   "target": "Hello, I'm a paramedic. How are you feeling?",
+  "patient": "I've been so tired I can barely stand.",
+  "patient_ja": "とても疲れて立っていられません。",
   "acceptable": [
    "Hello, I'm a paramedic. How are you feeling?"
   ],
@@ -2915,8 +3203,10 @@ const EXPRESSIONS = [
   "phase": 2,
   "tag": "主訴聴取",
   "adopted": true,
-  "prompt_ja": "状況を尋ねる",
+  "prompt_ja": "どうされましたか？",
   "target": "Can you tell me what's going on?",
+  "patient": "I'm so tired.",
+  "patient_ja": "とても疲れています。",
   "acceptable": [
    "Can you tell me what's going on?"
   ],
@@ -2937,6 +3227,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "バイタルを確認します。",
   "target": "Let me check your vitals.",
+  "patient": "Okay.",
+  "patient_ja": "はい。",
   "acceptable": [
    "Let me check your vitals."
   ],
@@ -2957,6 +3249,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "倦怠感はいつ始まりましたか？",
   "target": "When did this fatigue start?",
+  "patient": "It's been getting worse over a few weeks.",
+  "patient_ja": "数週間かけてだんだん悪くなっています。",
   "acceptable": [
    "When did this fatigue start?"
   ],
@@ -2977,6 +3271,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "胸痛や息切れは？",
   "target": "Any chest pain or shortness of breath?",
+  "patient": "I get short of breath climbing stairs.",
+  "patient_ja": "階段で息切れします。",
   "acceptable": [
    "Any chest pain or shortness of breath?"
   ],
@@ -2998,6 +3294,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "体重減少や寝汗は？",
   "target": "Any weight loss or night sweats?",
+  "patient": "I've lost some weight recently.",
+  "patient_ja": "最近少し体重が減りました。",
   "acceptable": [
    "Any weight loss or night sweats?"
   ],
@@ -3019,6 +3317,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "異常な出血はありますか？",
   "target": "Any unusual bleeding?",
+  "patient": "My periods have been very heavy.",
+  "patient_ja": "月経がとても重いです。",
   "acceptable": [
    "Any unusual bleeding?"
   ],
@@ -3038,6 +3338,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "持病はありますか？",
   "target": "Do you have any medical problems?",
+  "patient": "I sometimes have heavy periods.",
+  "patient_ja": "月経が重いことがあります。",
   "acceptable": [
    "Do you have any medical problems?"
   ],
@@ -3057,6 +3359,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "アレルギーや内服薬は？",
   "target": "Any allergies or medications?",
+  "patient": "No allergies, just iron sometimes.",
+  "patient_ja": "アレルギーなし、たまに鉄剤を。",
   "acceptable": [
    "Any allergies or medications?"
   ],
@@ -3076,6 +3380,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "心臓と血圧を確認します。",
   "target": "We'll check your heart and blood pressure.",
+  "patient": "Okay.",
+  "patient_ja": "はい。",
   "acceptable": [
    "We'll check your heart and blood pressure."
   ],
@@ -3097,6 +3403,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "両腕を上げてください。",
   "target": "Raise both your arms.",
+  "patient": "(raises both arms)",
+  "patient_ja": "（両腕を上げる）",
   "acceptable": [
    "Raise both your arms."
   ],
@@ -3117,6 +3425,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "腹部を触診します。",
   "target": "I'm going to gently feel your stomach.",
+  "patient": "Okay.",
+  "patient_ja": "はい。",
   "acceptable": [
    "I'm going to gently feel your stomach."
   ],
@@ -3136,8 +3446,10 @@ const EXPRESSIONS = [
   "phase": 6,
   "tag": "指示",
   "adopted": true,
-  "prompt_ja": "そのまま動かないよう伝える",
+  "prompt_ja": "そのまま動かないでください。",
   "target": "Please stay still.",
+  "patient": "Okay.",
+  "patient_ja": "はい。",
   "acceptable": [
    "Please stay still."
   ],
@@ -3156,8 +3468,10 @@ const EXPRESSIONS = [
   "phase": 7,
   "tag": "安心づけ",
   "adopted": true,
-  "prompt_ja": "安心させる",
+  "prompt_ja": "しっかり対応します、ご安心ください。",
   "target": "We're going to take good care of you.",
+  "patient": "Thank you.",
+  "patient_ja": "ありがとうございます。",
   "acceptable": [
    "We're going to take good care of you."
   ],
@@ -3179,6 +3493,8 @@ const EXPRESSIONS = [
   "adopted": true,
   "prompt_ja": "病院へ搬送します。",
   "target": "We're taking you to the hospital.",
+  "patient": "Thank you.",
+  "patient_ja": "ありがとうございます。",
   "acceptable": [
    "We're taking you to the hospital."
   ],
