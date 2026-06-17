@@ -1,5 +1,5 @@
 // 自動生成: 救急英語 10症候別×8フェーズ 学習データ (動画台本の救急隊員セリフ由来)
-const PHASES = [{"n": 1, "name": "初期接触", "en": "Initial Contact"}, {"n": 2, "name": "主訴聴取", "en": "Chief Complaint"}, {"n": 3, "name": "痛みの評価", "en": "Pain Assessment"}, {"n": 4, "name": "病歴聴取", "en": "SAMPLE History"}, {"n": 5, "name": "身体評価", "en": "Physical Assessment"}, {"n": 6, "name": "指示", "en": "Instructions"}, {"n": 7, "name": "安心づけ", "en": "Reassurance"}, {"n": 8, "name": "搬送", "en": "Transport"}];
+const PHASES = [{"n": 1, "name": "初期接触", "en": "Initial Contact"}, {"n": 2, "name": "主訴聴取", "en": "Chief Complaint"}, {"n": 3, "name": "病歴聴取", "en": "History of Present Illness"}, {"n": 4, "name": "既往歴などの聴取", "en": "SAMPLE History"}, {"n": 5, "name": "身体評価", "en": "Physical Assessment"}, {"n": 6, "name": "指示", "en": "Instructions"}, {"n": 7, "name": "安心づけ", "en": "Reassurance"}, {"n": 8, "name": "搬送", "en": "Transport"}];
 const EXPRESSIONS = [
  {
   "id": "01_Chest_Pain__1",
@@ -44,6 +44,26 @@ const EXPRESSIONS = [
   "symptom": "01_Chest_Pain",
   "symptom_ja": "胸痛",
   "order": 3,
+  "phase": 2,
+  "tag": "バイタル",
+  "adopted": true,
+  "prompt_ja": "相棒がバイタルを測ります。",
+  "target": "My partner will get your vitals.",
+  "acceptable": [
+   "My partner will get your vitals."
+  ],
+  "keywords": [
+   "partner",
+   "get",
+   "vitals"
+  ],
+  "freq": 0
+ },
+ {
+  "id": "01_Chest_Pain__4",
+  "symptom": "01_Chest_Pain",
+  "symptom_ja": "胸痛",
+  "order": 4,
   "phase": 3,
   "tag": "発症",
   "adopted": true,
@@ -60,10 +80,10 @@ const EXPRESSIONS = [
   "freq": 2
  },
  {
-  "id": "01_Chest_Pain__4",
+  "id": "01_Chest_Pain__5",
   "symptom": "01_Chest_Pain",
   "symptom_ja": "胸痛",
-  "order": 4,
+  "order": 5,
   "phase": 3,
   "tag": "部位",
   "adopted": true,
@@ -79,10 +99,10 @@ const EXPRESSIONS = [
   "freq": 4
  },
  {
-  "id": "01_Chest_Pain__5",
+  "id": "01_Chest_Pain__6",
   "symptom": "01_Chest_Pain",
   "symptom_ja": "胸痛",
-  "order": 5,
+  "order": 6,
   "phase": 3,
   "tag": "程度",
   "adopted": true,
@@ -101,10 +121,10 @@ const EXPRESSIONS = [
   "freq": 3
  },
  {
-  "id": "01_Chest_Pain__6",
+  "id": "01_Chest_Pain__7",
   "symptom": "01_Chest_Pain",
   "symptom_ja": "胸痛",
-  "order": 6,
+  "order": 7,
   "phase": 3,
   "tag": "性状",
   "adopted": true,
@@ -122,10 +142,10 @@ const EXPRESSIONS = [
   "freq": 0
  },
  {
-  "id": "01_Chest_Pain__7",
+  "id": "01_Chest_Pain__8",
   "symptom": "01_Chest_Pain",
   "symptom_ja": "胸痛",
-  "order": 7,
+  "order": 8,
   "phase": 3,
   "tag": "放散",
   "adopted": true,
@@ -140,10 +160,10 @@ const EXPRESSIONS = [
   "freq": 2
  },
  {
-  "id": "01_Chest_Pain__8",
+  "id": "01_Chest_Pain__9",
   "symptom": "01_Chest_Pain",
   "symptom_ja": "胸痛",
-  "order": 8,
+  "order": 9,
   "phase": 3,
   "tag": "随伴症状",
   "adopted": true,
@@ -160,10 +180,10 @@ const EXPRESSIONS = [
   "freq": 0
  },
  {
-  "id": "01_Chest_Pain__9",
+  "id": "01_Chest_Pain__10",
   "symptom": "01_Chest_Pain",
   "symptom_ja": "胸痛",
-  "order": 9,
+  "order": 10,
   "phase": 4,
   "tag": "既往歴",
   "adopted": true,
@@ -180,10 +200,10 @@ const EXPRESSIONS = [
   "freq": 0
  },
  {
-  "id": "01_Chest_Pain__10",
+  "id": "01_Chest_Pain__11",
   "symptom": "01_Chest_Pain",
   "symptom_ja": "胸痛",
-  "order": 10,
+  "order": 11,
   "phase": 4,
   "tag": "既往エピソード",
   "adopted": true,
@@ -198,10 +218,10 @@ const EXPRESSIONS = [
   "freq": 4
  },
  {
-  "id": "01_Chest_Pain__11",
+  "id": "01_Chest_Pain__12",
   "symptom": "01_Chest_Pain",
   "symptom_ja": "胸痛",
-  "order": 11,
+  "order": 12,
   "phase": 4,
   "tag": "心疾患既往",
   "adopted": true,
@@ -217,10 +237,10 @@ const EXPRESSIONS = [
   "freq": 4
  },
  {
-  "id": "01_Chest_Pain__12",
+  "id": "01_Chest_Pain__13",
   "symptom": "01_Chest_Pain",
   "symptom_ja": "胸痛",
-  "order": 12,
+  "order": 13,
   "phase": 4,
   "tag": "抗凝固薬",
   "adopted": true,
@@ -236,10 +256,10 @@ const EXPRESSIONS = [
   "freq": 2
  },
  {
-  "id": "01_Chest_Pain__13",
+  "id": "01_Chest_Pain__14",
   "symptom": "01_Chest_Pain",
   "symptom_ja": "胸痛",
-  "order": 13,
+  "order": 14,
   "phase": 4,
   "tag": "アレルギー",
   "adopted": true,
@@ -254,10 +274,10 @@ const EXPRESSIONS = [
   "freq": 104
  },
  {
-  "id": "01_Chest_Pain__14",
+  "id": "01_Chest_Pain__15",
   "symptom": "01_Chest_Pain",
   "symptom_ja": "胸痛",
-  "order": 14,
+  "order": 15,
   "phase": 4,
   "tag": "内服薬",
   "adopted": true,
@@ -274,10 +294,10 @@ const EXPRESSIONS = [
   "freq": 23
  },
  {
-  "id": "01_Chest_Pain__15",
+  "id": "01_Chest_Pain__16",
   "symptom": "01_Chest_Pain",
   "symptom_ja": "胸痛",
-  "order": 15,
+  "order": 16,
   "phase": 4,
   "tag": "最終飲食",
   "adopted": true,
@@ -294,10 +314,10 @@ const EXPRESSIONS = [
   "freq": 21
  },
  {
-  "id": "01_Chest_Pain__16",
+  "id": "01_Chest_Pain__17",
   "symptom": "01_Chest_Pain",
   "symptom_ja": "胸痛",
-  "order": 16,
+  "order": 17,
   "phase": 5,
   "tag": "処置(EKG)",
   "adopted": true,
@@ -316,10 +336,30 @@ const EXPRESSIONS = [
   "freq": 0
  },
  {
-  "id": "01_Chest_Pain__17",
+  "id": "01_Chest_Pain__18",
   "symptom": "01_Chest_Pain",
   "symptom_ja": "胸痛",
-  "order": 17,
+  "order": 18,
+  "phase": 5,
+  "tag": "身体評価",
+  "adopted": true,
+  "prompt_ja": "呼吸音を聴きます。",
+  "target": "Let me listen to your breathing.",
+  "acceptable": [
+   "Let me listen to your breathing."
+  ],
+  "keywords": [
+   "let",
+   "listen",
+   "breathing"
+  ],
+  "freq": 2
+ },
+ {
+  "id": "01_Chest_Pain__19",
+  "symptom": "01_Chest_Pain",
+  "symptom_ja": "胸痛",
+  "order": 19,
   "phase": 6,
   "tag": "処置(酸素)",
   "adopted": false,
@@ -336,10 +376,10 @@ const EXPRESSIONS = [
   "freq": 2
  },
  {
-  "id": "01_Chest_Pain__18",
+  "id": "01_Chest_Pain__20",
   "symptom": "01_Chest_Pain",
   "symptom_ja": "胸痛",
-  "order": 18,
+  "order": 20,
   "phase": 7,
   "tag": "安心づけ",
   "adopted": true,
@@ -357,10 +397,10 @@ const EXPRESSIONS = [
   "freq": 6
  },
  {
-  "id": "01_Chest_Pain__19",
+  "id": "01_Chest_Pain__21",
   "symptom": "01_Chest_Pain",
   "symptom_ja": "胸痛",
-  "order": 19,
+  "order": 21,
   "phase": 8,
   "tag": "搬送先",
   "adopted": true,
@@ -421,6 +461,26 @@ const EXPRESSIONS = [
   "symptom": "02_Respiratory_Distress",
   "symptom_ja": "呼吸困難",
   "order": 3,
+  "phase": 2,
+  "tag": "バイタル",
+  "adopted": true,
+  "prompt_ja": "相棒がバイタルを測ります。",
+  "target": "My partner will get your vitals.",
+  "acceptable": [
+   "My partner will get your vitals."
+  ],
+  "keywords": [
+   "partner",
+   "get",
+   "vitals"
+  ],
+  "freq": 0
+ },
+ {
+  "id": "02_Respiratory_Distress__4",
+  "symptom": "02_Respiratory_Distress",
+  "symptom_ja": "呼吸困難",
+  "order": 4,
   "phase": 3,
   "tag": "発症",
   "adopted": true,
@@ -438,10 +498,10 @@ const EXPRESSIONS = [
   "freq": 0
  },
  {
-  "id": "02_Respiratory_Distress__4",
+  "id": "02_Respiratory_Distress__5",
   "symptom": "02_Respiratory_Distress",
   "symptom_ja": "呼吸困難",
-  "order": 4,
+  "order": 5,
   "phase": 3,
   "tag": "程度",
   "adopted": true,
@@ -460,10 +520,10 @@ const EXPRESSIONS = [
   "freq": 0
  },
  {
-  "id": "02_Respiratory_Distress__5",
+  "id": "02_Respiratory_Distress__6",
   "symptom": "02_Respiratory_Distress",
   "symptom_ja": "呼吸困難",
-  "order": 5,
+  "order": 6,
   "phase": 3,
   "tag": "随伴症状",
   "adopted": true,
@@ -477,26 +537,6 @@ const EXPRESSIONS = [
    "pain"
   ],
   "freq": 6
- },
- {
-  "id": "02_Respiratory_Distress__6",
-  "symptom": "02_Respiratory_Distress",
-  "symptom_ja": "呼吸困難",
-  "order": 6,
-  "phase": 3,
-  "tag": "処置",
-  "adopted": true,
-  "prompt_ja": "呼吸の音を聴きます。",
-  "target": "Let me listen to your breathing.",
-  "acceptable": [
-   "Let me listen to your breathing."
-  ],
-  "keywords": [
-   "let",
-   "listen",
-   "breathing"
-  ],
-  "freq": 2
  },
  {
   "id": "02_Respiratory_Distress__7",
@@ -581,6 +621,26 @@ const EXPRESSIONS = [
   "symptom_ja": "呼吸困難",
   "order": 11,
   "phase": 5,
+  "tag": "身体評価",
+  "adopted": true,
+  "prompt_ja": "呼吸の音を聴きます。",
+  "target": "Let me listen to your breathing.",
+  "acceptable": [
+   "Let me listen to your breathing."
+  ],
+  "keywords": [
+   "let",
+   "listen",
+   "breathing"
+  ],
+  "freq": 2
+ },
+ {
+  "id": "02_Respiratory_Distress__12",
+  "symptom": "02_Respiratory_Distress",
+  "symptom_ja": "呼吸困難",
+  "order": 12,
+  "phase": 5,
   "tag": "身体評価/指示",
   "adopted": true,
   "prompt_ja": "ゆっくり深呼吸してください。",
@@ -598,10 +658,10 @@ const EXPRESSIONS = [
   "freq": 0
  },
  {
-  "id": "02_Respiratory_Distress__12",
+  "id": "02_Respiratory_Distress__13",
   "symptom": "02_Respiratory_Distress",
   "symptom_ja": "呼吸困難",
-  "order": 12,
+  "order": 13,
   "phase": 6,
   "tag": "処置(酸素)",
   "adopted": false,
@@ -618,10 +678,10 @@ const EXPRESSIONS = [
   "freq": 2
  },
  {
-  "id": "02_Respiratory_Distress__13",
+  "id": "02_Respiratory_Distress__14",
   "symptom": "02_Respiratory_Distress",
   "symptom_ja": "呼吸困難",
-  "order": 13,
+  "order": 14,
   "phase": 7,
   "tag": "安心づけ",
   "adopted": true,
@@ -639,10 +699,10 @@ const EXPRESSIONS = [
   "freq": 6
  },
  {
-  "id": "02_Respiratory_Distress__14",
+  "id": "02_Respiratory_Distress__15",
   "symptom": "02_Respiratory_Distress",
   "symptom_ja": "呼吸困難",
-  "order": 14,
+  "order": 15,
   "phase": 8,
   "tag": "搬送先",
   "adopted": true,
@@ -704,6 +764,26 @@ const EXPRESSIONS = [
   "symptom": "03_Dizziness",
   "symptom_ja": "めまい",
   "order": 3,
+  "phase": 2,
+  "tag": "バイタル",
+  "adopted": true,
+  "prompt_ja": "相棒がバイタルを測ります。",
+  "target": "My partner will get your vitals.",
+  "acceptable": [
+   "My partner will get your vitals."
+  ],
+  "keywords": [
+   "partner",
+   "get",
+   "vitals"
+  ],
+  "freq": 0
+ },
+ {
+  "id": "03_Dizziness__4",
+  "symptom": "03_Dizziness",
+  "symptom_ja": "めまい",
+  "order": 4,
   "phase": 3,
   "tag": "発症",
   "adopted": true,
@@ -720,10 +800,10 @@ const EXPRESSIONS = [
   "freq": 8
  },
  {
-  "id": "03_Dizziness__4",
+  "id": "03_Dizziness__5",
   "symptom": "03_Dizziness",
   "symptom_ja": "めまい",
-  "order": 4,
+  "order": 5,
   "phase": 3,
   "tag": "性状",
   "adopted": true,
@@ -740,10 +820,10 @@ const EXPRESSIONS = [
   "freq": 0
  },
  {
-  "id": "03_Dizziness__5",
+  "id": "03_Dizziness__6",
   "symptom": "03_Dizziness",
   "symptom_ja": "めまい",
-  "order": 5,
+  "order": 6,
   "phase": 3,
   "tag": "程度",
   "adopted": true,
@@ -762,10 +842,10 @@ const EXPRESSIONS = [
   "freq": 0
  },
  {
-  "id": "03_Dizziness__6",
+  "id": "03_Dizziness__7",
   "symptom": "03_Dizziness",
   "symptom_ja": "めまい",
-  "order": 6,
+  "order": 7,
   "phase": 3,
   "tag": "状況/外傷",
   "adopted": true,
@@ -783,10 +863,10 @@ const EXPRESSIONS = [
   "freq": 0
  },
  {
-  "id": "03_Dizziness__7",
+  "id": "03_Dizziness__8",
   "symptom": "03_Dizziness",
   "symptom_ja": "めまい",
-  "order": 7,
+  "order": 8,
   "phase": 3,
   "tag": "随伴症状",
   "adopted": true,
@@ -802,10 +882,10 @@ const EXPRESSIONS = [
   "freq": 27
  },
  {
-  "id": "03_Dizziness__8",
+  "id": "03_Dizziness__9",
   "symptom": "03_Dizziness",
   "symptom_ja": "めまい",
-  "order": 8,
+  "order": 9,
   "phase": 4,
   "tag": "既往歴",
   "adopted": true,
@@ -822,10 +902,10 @@ const EXPRESSIONS = [
   "freq": 0
  },
  {
-  "id": "03_Dizziness__9",
+  "id": "03_Dizziness__10",
   "symptom": "03_Dizziness",
   "symptom_ja": "めまい",
-  "order": 9,
+  "order": 10,
   "phase": 4,
   "tag": "内服薬",
   "adopted": true,
@@ -844,10 +924,10 @@ const EXPRESSIONS = [
   "freq": 0
  },
  {
-  "id": "03_Dizziness__10",
+  "id": "03_Dizziness__11",
   "symptom": "03_Dizziness",
   "symptom_ja": "めまい",
-  "order": 10,
+  "order": 11,
   "phase": 4,
   "tag": "アレルギー",
   "adopted": true,
@@ -862,10 +942,10 @@ const EXPRESSIONS = [
   "freq": 104
  },
  {
-  "id": "03_Dizziness__11",
+  "id": "03_Dizziness__12",
   "symptom": "03_Dizziness",
   "symptom_ja": "めまい",
-  "order": 11,
+  "order": 12,
   "phase": 5,
   "tag": "身体評価(脳卒中)",
   "adopted": true,
@@ -882,10 +962,10 @@ const EXPRESSIONS = [
   "freq": 0
  },
  {
-  "id": "03_Dizziness__12",
+  "id": "03_Dizziness__13",
   "symptom": "03_Dizziness",
   "symptom_ja": "めまい",
-  "order": 12,
+  "order": 13,
   "phase": 5,
   "tag": "身体評価",
   "adopted": true,
@@ -905,10 +985,10 @@ const EXPRESSIONS = [
   "freq": 0
  },
  {
-  "id": "03_Dizziness__13",
+  "id": "03_Dizziness__14",
   "symptom": "03_Dizziness",
   "symptom_ja": "めまい",
-  "order": 13,
+  "order": 14,
   "phase": 6,
   "tag": "指示",
   "adopted": true,
@@ -925,10 +1005,10 @@ const EXPRESSIONS = [
   "freq": 4
  },
  {
-  "id": "03_Dizziness__14",
+  "id": "03_Dizziness__15",
   "symptom": "03_Dizziness",
   "symptom_ja": "めまい",
-  "order": 14,
+  "order": 15,
   "phase": 7,
   "tag": "安心づけ",
   "adopted": true,
@@ -946,10 +1026,10 @@ const EXPRESSIONS = [
   "freq": 6
  },
  {
-  "id": "03_Dizziness__15",
+  "id": "03_Dizziness__16",
   "symptom": "03_Dizziness",
   "symptom_ja": "めまい",
-  "order": 15,
+  "order": 16,
   "phase": 8,
   "tag": "処置(EKG)/搬送",
   "adopted": true,
@@ -1009,6 +1089,26 @@ const EXPRESSIONS = [
   "symptom": "04_Headache",
   "symptom_ja": "頭痛",
   "order": 3,
+  "phase": 2,
+  "tag": "バイタル",
+  "adopted": true,
+  "prompt_ja": "相棒がバイタルを測ります。",
+  "target": "My partner will get your vitals.",
+  "acceptable": [
+   "My partner will get your vitals."
+  ],
+  "keywords": [
+   "partner",
+   "get",
+   "vitals"
+  ],
+  "freq": 0
+ },
+ {
+  "id": "04_Headache__4",
+  "symptom": "04_Headache",
+  "symptom_ja": "頭痛",
+  "order": 4,
   "phase": 3,
   "tag": "発症",
   "adopted": true,
@@ -1024,10 +1124,10 @@ const EXPRESSIONS = [
   "freq": 4
  },
  {
-  "id": "04_Headache__4",
+  "id": "04_Headache__5",
   "symptom": "04_Headache",
   "symptom_ja": "頭痛",
-  "order": 4,
+  "order": 5,
   "phase": 3,
   "tag": "程度",
   "adopted": true,
@@ -1046,10 +1146,10 @@ const EXPRESSIONS = [
   "freq": 0
  },
  {
-  "id": "04_Headache__5",
+  "id": "04_Headache__6",
   "symptom": "04_Headache",
   "symptom_ja": "頭痛",
-  "order": 5,
+  "order": 6,
   "phase": 3,
   "tag": "随伴/外傷",
   "adopted": true,
@@ -1066,10 +1166,10 @@ const EXPRESSIONS = [
   "freq": 0
  },
  {
-  "id": "04_Headache__6",
+  "id": "04_Headache__7",
   "symptom": "04_Headache",
   "symptom_ja": "頭痛",
-  "order": 6,
+  "order": 7,
   "phase": 3,
   "tag": "随伴症状",
   "adopted": true,
@@ -1087,10 +1187,10 @@ const EXPRESSIONS = [
   "freq": 0
  },
  {
-  "id": "04_Headache__7",
+  "id": "04_Headache__8",
   "symptom": "04_Headache",
   "symptom_ja": "頭痛",
-  "order": 7,
+  "order": 8,
   "phase": 4,
   "tag": "既往歴",
   "adopted": true,
@@ -1107,10 +1207,10 @@ const EXPRESSIONS = [
   "freq": 0
  },
  {
-  "id": "04_Headache__8",
+  "id": "04_Headache__9",
   "symptom": "04_Headache",
   "symptom_ja": "頭痛",
-  "order": 8,
+  "order": 9,
   "phase": 4,
   "tag": "抗凝固薬",
   "adopted": true,
@@ -1127,10 +1227,10 @@ const EXPRESSIONS = [
   "freq": 5
  },
  {
-  "id": "04_Headache__9",
+  "id": "04_Headache__10",
   "symptom": "04_Headache",
   "symptom_ja": "頭痛",
-  "order": 9,
+  "order": 10,
   "phase": 4,
   "tag": "アレルギー",
   "adopted": true,
@@ -1145,10 +1245,10 @@ const EXPRESSIONS = [
   "freq": 104
  },
  {
-  "id": "04_Headache__10",
+  "id": "04_Headache__11",
   "symptom": "04_Headache",
   "symptom_ja": "頭痛",
-  "order": 10,
+  "order": 11,
   "phase": 5,
   "tag": "身体評価(脳卒中)",
   "adopted": true,
@@ -1165,10 +1265,10 @@ const EXPRESSIONS = [
   "freq": 0
  },
  {
-  "id": "04_Headache__11",
+  "id": "04_Headache__12",
   "symptom": "04_Headache",
   "symptom_ja": "頭痛",
-  "order": 11,
+  "order": 12,
   "phase": 5,
   "tag": "身体評価",
   "adopted": true,
@@ -1185,10 +1285,10 @@ const EXPRESSIONS = [
   "freq": 0
  },
  {
-  "id": "04_Headache__12",
+  "id": "04_Headache__13",
   "symptom": "04_Headache",
   "symptom_ja": "頭痛",
-  "order": 12,
+  "order": 13,
   "phase": 6,
   "tag": "指示",
   "adopted": true,
@@ -1205,10 +1305,10 @@ const EXPRESSIONS = [
   "freq": 4
  },
  {
-  "id": "04_Headache__13",
+  "id": "04_Headache__14",
   "symptom": "04_Headache",
   "symptom_ja": "頭痛",
-  "order": 13,
+  "order": 14,
   "phase": 7,
   "tag": "処置/配慮",
   "adopted": true,
@@ -1226,10 +1326,10 @@ const EXPRESSIONS = [
   "freq": 0
  },
  {
-  "id": "04_Headache__14",
+  "id": "04_Headache__15",
   "symptom": "04_Headache",
   "symptom_ja": "頭痛",
-  "order": 14,
+  "order": 15,
   "phase": 8,
   "tag": "搬送先",
   "adopted": true,
@@ -1290,6 +1390,26 @@ const EXPRESSIONS = [
   "symptom": "05_Back_Pain",
   "symptom_ja": "背部痛",
   "order": 3,
+  "phase": 2,
+  "tag": "バイタル",
+  "adopted": true,
+  "prompt_ja": "相棒がバイタルを測ります。",
+  "target": "My partner will get your vitals.",
+  "acceptable": [
+   "My partner will get your vitals."
+  ],
+  "keywords": [
+   "partner",
+   "get",
+   "vitals"
+  ],
+  "freq": 0
+ },
+ {
+  "id": "05_Back_Pain__4",
+  "symptom": "05_Back_Pain",
+  "symptom_ja": "背部痛",
+  "order": 4,
   "phase": 3,
   "tag": "発症",
   "adopted": true,
@@ -1307,10 +1427,10 @@ const EXPRESSIONS = [
   "freq": 5
  },
  {
-  "id": "05_Back_Pain__4",
+  "id": "05_Back_Pain__5",
   "symptom": "05_Back_Pain",
   "symptom_ja": "背部痛",
-  "order": 4,
+  "order": 5,
   "phase": 3,
   "tag": "部位",
   "adopted": true,
@@ -1327,10 +1447,10 @@ const EXPRESSIONS = [
   "freq": 0
  },
  {
-  "id": "05_Back_Pain__5",
+  "id": "05_Back_Pain__6",
   "symptom": "05_Back_Pain",
   "symptom_ja": "背部痛",
-  "order": 5,
+  "order": 6,
   "phase": 3,
   "tag": "程度",
   "adopted": true,
@@ -1349,10 +1469,10 @@ const EXPRESSIONS = [
   "freq": 3
  },
  {
-  "id": "05_Back_Pain__6",
+  "id": "05_Back_Pain__7",
   "symptom": "05_Back_Pain",
   "symptom_ja": "背部痛",
-  "order": 6,
+  "order": 7,
   "phase": 3,
   "tag": "放散",
   "adopted": true,
@@ -1368,10 +1488,10 @@ const EXPRESSIONS = [
   "freq": 0
  },
  {
-  "id": "05_Back_Pain__7",
+  "id": "05_Back_Pain__8",
   "symptom": "05_Back_Pain",
   "symptom_ja": "背部痛",
-  "order": 7,
+  "order": 8,
   "phase": 3,
   "tag": "随伴/神経",
   "adopted": true,
@@ -1388,10 +1508,10 @@ const EXPRESSIONS = [
   "freq": 1
  },
  {
-  "id": "05_Back_Pain__8",
+  "id": "05_Back_Pain__9",
   "symptom": "05_Back_Pain",
   "symptom_ja": "背部痛",
-  "order": 8,
+  "order": 9,
   "phase": 3,
   "tag": "Red-flag",
   "adopted": true,
@@ -1408,10 +1528,10 @@ const EXPRESSIONS = [
   "freq": 1
  },
  {
-  "id": "05_Back_Pain__9",
+  "id": "05_Back_Pain__10",
   "symptom": "05_Back_Pain",
   "symptom_ja": "背部痛",
-  "order": 9,
+  "order": 10,
   "phase": 4,
   "tag": "既往歴",
   "adopted": true,
@@ -1428,10 +1548,10 @@ const EXPRESSIONS = [
   "freq": 0
  },
  {
-  "id": "05_Back_Pain__10",
+  "id": "05_Back_Pain__11",
   "symptom": "05_Back_Pain",
   "symptom_ja": "背部痛",
-  "order": 10,
+  "order": 11,
   "phase": 4,
   "tag": "アレルギー/内服薬",
   "adopted": true,
@@ -1447,10 +1567,10 @@ const EXPRESSIONS = [
   "freq": 0
  },
  {
-  "id": "05_Back_Pain__11",
+  "id": "05_Back_Pain__12",
   "symptom": "05_Back_Pain",
   "symptom_ja": "背部痛",
-  "order": 11,
+  "order": 12,
   "phase": 5,
   "tag": "身体評価",
   "adopted": true,
@@ -1468,10 +1588,51 @@ const EXPRESSIONS = [
   "freq": 1
  },
  {
-  "id": "05_Back_Pain__12",
+  "id": "05_Back_Pain__13",
   "symptom": "05_Back_Pain",
   "symptom_ja": "背部痛",
-  "order": 12,
+  "order": 13,
+  "phase": 5,
+  "tag": "身体評価",
+  "adopted": true,
+  "prompt_ja": "呼吸音を聴きます。",
+  "target": "Let me listen to your breathing.",
+  "acceptable": [
+   "Let me listen to your breathing."
+  ],
+  "keywords": [
+   "let",
+   "listen",
+   "breathing"
+  ],
+  "freq": 2
+ },
+ {
+  "id": "05_Back_Pain__14",
+  "symptom": "05_Back_Pain",
+  "symptom_ja": "背部痛",
+  "order": 14,
+  "phase": 5,
+  "tag": "身体評価",
+  "adopted": true,
+  "prompt_ja": "腹部を触診します。",
+  "target": "I'm going to gently feel your stomach.",
+  "acceptable": [
+   "I'm going to gently feel your stomach."
+  ],
+  "keywords": [
+   "going",
+   "gently",
+   "feel",
+   "stomach"
+  ],
+  "freq": 0
+ },
+ {
+  "id": "05_Back_Pain__15",
+  "symptom": "05_Back_Pain",
+  "symptom_ja": "背部痛",
+  "order": 15,
   "phase": 6,
   "tag": "指示",
   "adopted": true,
@@ -1488,10 +1649,10 @@ const EXPRESSIONS = [
   "freq": 4
  },
  {
-  "id": "05_Back_Pain__13",
+  "id": "05_Back_Pain__16",
   "symptom": "05_Back_Pain",
   "symptom_ja": "背部痛",
-  "order": 13,
+  "order": 16,
   "phase": 7,
   "tag": "安心づけ",
   "adopted": true,
@@ -1509,10 +1670,10 @@ const EXPRESSIONS = [
   "freq": 6
  },
  {
-  "id": "05_Back_Pain__14",
+  "id": "05_Back_Pain__17",
   "symptom": "05_Back_Pain",
   "symptom_ja": "背部痛",
-  "order": 14,
+  "order": 17,
   "phase": 8,
   "tag": "処置/搬送",
   "adopted": true,
@@ -1593,6 +1754,27 @@ const EXPRESSIONS = [
   "symptom": "06_Altered_Consciousness",
   "symptom_ja": "意識障害",
   "order": 4,
+  "phase": 2,
+  "tag": "バイタル",
+  "adopted": true,
+  "prompt_ja": "バイタルを確認します。",
+  "target": "Let me check her vitals.",
+  "acceptable": [
+   "Let me check her vitals."
+  ],
+  "keywords": [
+   "let",
+   "check",
+   "her",
+   "vitals"
+  ],
+  "freq": 1
+ },
+ {
+  "id": "06_Altered_Consciousness__5",
+  "symptom": "06_Altered_Consciousness",
+  "symptom_ja": "意識障害",
+  "order": 5,
   "phase": 3,
   "tag": "状況",
   "adopted": true,
@@ -1609,10 +1791,10 @@ const EXPRESSIONS = [
   "freq": 25
  },
  {
-  "id": "06_Altered_Consciousness__5",
+  "id": "06_Altered_Consciousness__6",
   "symptom": "06_Altered_Consciousness",
   "symptom_ja": "意識障害",
-  "order": 5,
+  "order": 6,
   "phase": 3,
   "tag": "状況/外傷",
   "adopted": true,
@@ -1629,10 +1811,10 @@ const EXPRESSIONS = [
   "freq": 0
  },
  {
-  "id": "06_Altered_Consciousness__6",
+  "id": "06_Altered_Consciousness__7",
   "symptom": "06_Altered_Consciousness",
   "symptom_ja": "意識障害",
-  "order": 6,
+  "order": 7,
   "phase": 4,
   "tag": "既往歴",
   "adopted": true,
@@ -1649,10 +1831,10 @@ const EXPRESSIONS = [
   "freq": 0
  },
  {
-  "id": "06_Altered_Consciousness__7",
+  "id": "06_Altered_Consciousness__8",
   "symptom": "06_Altered_Consciousness",
   "symptom_ja": "意識障害",
-  "order": 7,
+  "order": 8,
   "phase": 4,
   "tag": "アレルギー/内服薬",
   "adopted": true,
@@ -1671,10 +1853,10 @@ const EXPRESSIONS = [
   "freq": 0
  },
  {
-  "id": "06_Altered_Consciousness__8",
+  "id": "06_Altered_Consciousness__9",
   "symptom": "06_Altered_Consciousness",
   "symptom_ja": "意識障害",
-  "order": 8,
+  "order": 9,
   "phase": 5,
   "tag": "処置(酸素/血糖)",
   "adopted": false,
@@ -1693,10 +1875,31 @@ const EXPRESSIONS = [
   "freq": 0
  },
  {
-  "id": "06_Altered_Consciousness__9",
+  "id": "06_Altered_Consciousness__10",
   "symptom": "06_Altered_Consciousness",
   "symptom_ja": "意識障害",
-  "order": 9,
+  "order": 10,
+  "phase": 5,
+  "tag": "身体評価",
+  "adopted": true,
+  "prompt_ja": "呼吸音を聴きます。",
+  "target": "Let me listen to her breathing.",
+  "acceptable": [
+   "Let me listen to her breathing."
+  ],
+  "keywords": [
+   "let",
+   "listen",
+   "her",
+   "breathing"
+  ],
+  "freq": 0
+ },
+ {
+  "id": "06_Altered_Consciousness__11",
+  "symptom": "06_Altered_Consciousness",
+  "symptom_ja": "意識障害",
+  "order": 11,
   "phase": 6,
   "tag": "指示",
   "adopted": true,
@@ -1713,10 +1916,10 @@ const EXPRESSIONS = [
   "freq": 4
  },
  {
-  "id": "06_Altered_Consciousness__10",
+  "id": "06_Altered_Consciousness__12",
   "symptom": "06_Altered_Consciousness",
   "symptom_ja": "意識障害",
-  "order": 10,
+  "order": 12,
   "phase": 7,
   "tag": "安心づけ",
   "adopted": true,
@@ -1734,10 +1937,10 @@ const EXPRESSIONS = [
   "freq": 6
  },
  {
-  "id": "06_Altered_Consciousness__11",
+  "id": "06_Altered_Consciousness__13",
   "symptom": "06_Altered_Consciousness",
   "symptom_ja": "意識障害",
-  "order": 11,
+  "order": 13,
   "phase": 8,
   "tag": "処置(EKG)/搬送",
   "adopted": true,
@@ -1799,6 +2002,26 @@ const EXPRESSIONS = [
   "symptom": "07_Abdominal_Pain",
   "symptom_ja": "腹痛",
   "order": 3,
+  "phase": 2,
+  "tag": "バイタル",
+  "adopted": true,
+  "prompt_ja": "バイタルを確認します。",
+  "target": "Let me check your vitals.",
+  "acceptable": [
+   "Let me check your vitals."
+  ],
+  "keywords": [
+   "let",
+   "check",
+   "vitals"
+  ],
+  "freq": 4
+ },
+ {
+  "id": "07_Abdominal_Pain__4",
+  "symptom": "07_Abdominal_Pain",
+  "symptom_ja": "腹痛",
+  "order": 4,
   "phase": 3,
   "tag": "発症",
   "adopted": true,
@@ -1816,10 +2039,10 @@ const EXPRESSIONS = [
   "freq": 9
  },
  {
-  "id": "07_Abdominal_Pain__4",
+  "id": "07_Abdominal_Pain__5",
   "symptom": "07_Abdominal_Pain",
   "symptom_ja": "腹痛",
-  "order": 4,
+  "order": 5,
   "phase": 3,
   "tag": "部位",
   "adopted": true,
@@ -1836,10 +2059,10 @@ const EXPRESSIONS = [
   "freq": 0
  },
  {
-  "id": "07_Abdominal_Pain__5",
+  "id": "07_Abdominal_Pain__6",
   "symptom": "07_Abdominal_Pain",
   "symptom_ja": "腹痛",
-  "order": 5,
+  "order": 6,
   "phase": 3,
   "tag": "程度",
   "adopted": true,
@@ -1858,10 +2081,10 @@ const EXPRESSIONS = [
   "freq": 3
  },
  {
-  "id": "07_Abdominal_Pain__6",
+  "id": "07_Abdominal_Pain__7",
   "symptom": "07_Abdominal_Pain",
   "symptom_ja": "腹痛",
-  "order": 6,
+  "order": 7,
   "phase": 3,
   "tag": "随伴症状",
   "adopted": true,
@@ -1877,10 +2100,10 @@ const EXPRESSIONS = [
   "freq": 27
  },
  {
-  "id": "07_Abdominal_Pain__7",
+  "id": "07_Abdominal_Pain__8",
   "symptom": "07_Abdominal_Pain",
   "symptom_ja": "腹痛",
-  "order": 7,
+  "order": 8,
   "phase": 3,
   "tag": "Red-flag",
   "adopted": true,
@@ -1897,10 +2120,10 @@ const EXPRESSIONS = [
   "freq": 0
  },
  {
-  "id": "07_Abdominal_Pain__8",
+  "id": "07_Abdominal_Pain__9",
   "symptom": "07_Abdominal_Pain",
   "symptom_ja": "腹痛",
-  "order": 8,
+  "order": 9,
   "phase": 3,
   "tag": "随伴症状",
   "adopted": true,
@@ -1915,10 +2138,10 @@ const EXPRESSIONS = [
   "freq": 16
  },
  {
-  "id": "07_Abdominal_Pain__9",
+  "id": "07_Abdominal_Pain__10",
   "symptom": "07_Abdominal_Pain",
   "symptom_ja": "腹痛",
-  "order": 9,
+  "order": 10,
   "phase": 4,
   "tag": "既往歴",
   "adopted": true,
@@ -1935,10 +2158,10 @@ const EXPRESSIONS = [
   "freq": 0
  },
  {
-  "id": "07_Abdominal_Pain__10",
+  "id": "07_Abdominal_Pain__11",
   "symptom": "07_Abdominal_Pain",
   "symptom_ja": "腹痛",
-  "order": 10,
+  "order": 11,
   "phase": 4,
   "tag": "最終飲食",
   "adopted": true,
@@ -1956,10 +2179,10 @@ const EXPRESSIONS = [
   "freq": 7
  },
  {
-  "id": "07_Abdominal_Pain__11",
+  "id": "07_Abdominal_Pain__12",
   "symptom": "07_Abdominal_Pain",
   "symptom_ja": "腹痛",
-  "order": 11,
+  "order": 12,
   "phase": 4,
   "tag": "アレルギー/内服薬",
   "adopted": true,
@@ -1975,10 +2198,10 @@ const EXPRESSIONS = [
   "freq": 0
  },
  {
-  "id": "07_Abdominal_Pain__12",
+  "id": "07_Abdominal_Pain__13",
   "symptom": "07_Abdominal_Pain",
   "symptom_ja": "腹痛",
-  "order": 12,
+  "order": 13,
   "phase": 5,
   "tag": "身体評価",
   "adopted": true,
@@ -1996,10 +2219,10 @@ const EXPRESSIONS = [
   "freq": 0
  },
  {
-  "id": "07_Abdominal_Pain__13",
+  "id": "07_Abdominal_Pain__14",
   "symptom": "07_Abdominal_Pain",
   "symptom_ja": "腹痛",
-  "order": 13,
+  "order": 14,
   "phase": 6,
   "tag": "指示",
   "adopted": true,
@@ -2016,10 +2239,10 @@ const EXPRESSIONS = [
   "freq": 4
  },
  {
-  "id": "07_Abdominal_Pain__14",
+  "id": "07_Abdominal_Pain__15",
   "symptom": "07_Abdominal_Pain",
   "symptom_ja": "腹痛",
-  "order": 14,
+  "order": 15,
   "phase": 7,
   "tag": "安心づけ",
   "adopted": true,
@@ -2037,10 +2260,10 @@ const EXPRESSIONS = [
   "freq": 6
  },
  {
-  "id": "07_Abdominal_Pain__15",
+  "id": "07_Abdominal_Pain__16",
   "symptom": "07_Abdominal_Pain",
   "symptom_ja": "腹痛",
-  "order": 15,
+  "order": 16,
   "phase": 8,
   "tag": "搬送先",
   "adopted": true,
@@ -2101,6 +2324,26 @@ const EXPRESSIONS = [
   "symptom": "08_Nausea_Vomiting",
   "symptom_ja": "悪心・嘔吐",
   "order": 3,
+  "phase": 2,
+  "tag": "バイタル",
+  "adopted": true,
+  "prompt_ja": "バイタルを確認します。",
+  "target": "Let me check your vitals.",
+  "acceptable": [
+   "Let me check your vitals."
+  ],
+  "keywords": [
+   "let",
+   "check",
+   "vitals"
+  ],
+  "freq": 4
+ },
+ {
+  "id": "08_Nausea_Vomiting__4",
+  "symptom": "08_Nausea_Vomiting",
+  "symptom_ja": "悪心・嘔吐",
+  "order": 4,
   "phase": 3,
   "tag": "発症",
   "adopted": true,
@@ -2117,10 +2360,10 @@ const EXPRESSIONS = [
   "freq": 5
  },
  {
-  "id": "08_Nausea_Vomiting__4",
+  "id": "08_Nausea_Vomiting__5",
   "symptom": "08_Nausea_Vomiting",
   "symptom_ja": "悪心・嘔吐",
-  "order": 4,
+  "order": 5,
   "phase": 3,
   "tag": "随伴/評価",
   "adopted": true,
@@ -2138,10 +2381,10 @@ const EXPRESSIONS = [
   "freq": 12
  },
  {
-  "id": "08_Nausea_Vomiting__5",
+  "id": "08_Nausea_Vomiting__6",
   "symptom": "08_Nausea_Vomiting",
   "symptom_ja": "悪心・嘔吐",
-  "order": 5,
+  "order": 6,
   "phase": 3,
   "tag": "Red-flag",
   "adopted": true,
@@ -2157,10 +2400,10 @@ const EXPRESSIONS = [
   "freq": 0
  },
  {
-  "id": "08_Nausea_Vomiting__6",
+  "id": "08_Nausea_Vomiting__7",
   "symptom": "08_Nausea_Vomiting",
   "symptom_ja": "悪心・嘔吐",
-  "order": 6,
+  "order": 7,
   "phase": 3,
   "tag": "随伴症状",
   "adopted": true,
@@ -2178,10 +2421,10 @@ const EXPRESSIONS = [
   "freq": 0
  },
  {
-  "id": "08_Nausea_Vomiting__7",
+  "id": "08_Nausea_Vomiting__8",
   "symptom": "08_Nausea_Vomiting",
   "symptom_ja": "悪心・嘔吐",
-  "order": 7,
+  "order": 8,
   "phase": 3,
   "tag": "増悪寛解",
   "adopted": true,
@@ -2200,10 +2443,10 @@ const EXPRESSIONS = [
   "freq": 0
  },
  {
-  "id": "08_Nausea_Vomiting__8",
+  "id": "08_Nausea_Vomiting__9",
   "symptom": "08_Nausea_Vomiting",
   "symptom_ja": "悪心・嘔吐",
-  "order": 8,
+  "order": 9,
   "phase": 3,
   "tag": "状況/外傷",
   "adopted": true,
@@ -2219,10 +2462,10 @@ const EXPRESSIONS = [
   "freq": 4
  },
  {
-  "id": "08_Nausea_Vomiting__9",
+  "id": "08_Nausea_Vomiting__10",
   "symptom": "08_Nausea_Vomiting",
   "symptom_ja": "悪心・嘔吐",
-  "order": 9,
+  "order": 10,
   "phase": 4,
   "tag": "既往歴",
   "adopted": true,
@@ -2239,10 +2482,10 @@ const EXPRESSIONS = [
   "freq": 0
  },
  {
-  "id": "08_Nausea_Vomiting__10",
+  "id": "08_Nausea_Vomiting__11",
   "symptom": "08_Nausea_Vomiting",
   "symptom_ja": "悪心・嘔吐",
-  "order": 10,
+  "order": 11,
   "phase": 4,
   "tag": "アレルギー/内服薬",
   "adopted": true,
@@ -2258,10 +2501,51 @@ const EXPRESSIONS = [
   "freq": 0
  },
  {
-  "id": "08_Nausea_Vomiting__11",
+  "id": "08_Nausea_Vomiting__12",
   "symptom": "08_Nausea_Vomiting",
   "symptom_ja": "悪心・嘔吐",
-  "order": 11,
+  "order": 12,
+  "phase": 5,
+  "tag": "身体評価",
+  "adopted": true,
+  "prompt_ja": "両腕を上げてください。",
+  "target": "Raise both your arms.",
+  "acceptable": [
+   "Raise both your arms."
+  ],
+  "keywords": [
+   "raise",
+   "both",
+   "arms"
+  ],
+  "freq": 0
+ },
+ {
+  "id": "08_Nausea_Vomiting__13",
+  "symptom": "08_Nausea_Vomiting",
+  "symptom_ja": "悪心・嘔吐",
+  "order": 13,
+  "phase": 5,
+  "tag": "身体評価",
+  "adopted": true,
+  "prompt_ja": "腹部を触診します。",
+  "target": "I'm going to gently feel your stomach.",
+  "acceptable": [
+   "I'm going to gently feel your stomach."
+  ],
+  "keywords": [
+   "going",
+   "gently",
+   "feel",
+   "stomach"
+  ],
+  "freq": 0
+ },
+ {
+  "id": "08_Nausea_Vomiting__14",
+  "symptom": "08_Nausea_Vomiting",
+  "symptom_ja": "悪心・嘔吐",
+  "order": 14,
   "phase": 6,
   "tag": "指示",
   "adopted": true,
@@ -2278,10 +2562,10 @@ const EXPRESSIONS = [
   "freq": 4
  },
  {
-  "id": "08_Nausea_Vomiting__12",
+  "id": "08_Nausea_Vomiting__15",
   "symptom": "08_Nausea_Vomiting",
   "symptom_ja": "悪心・嘔吐",
-  "order": 12,
+  "order": 15,
   "phase": 7,
   "tag": "安心づけ",
   "adopted": true,
@@ -2299,10 +2583,10 @@ const EXPRESSIONS = [
   "freq": 6
  },
  {
-  "id": "08_Nausea_Vomiting__13",
+  "id": "08_Nausea_Vomiting__16",
   "symptom": "08_Nausea_Vomiting",
   "symptom_ja": "悪心・嘔吐",
-  "order": 13,
+  "order": 16,
   "phase": 8,
   "tag": "搬送先",
   "adopted": true,
@@ -2364,6 +2648,26 @@ const EXPRESSIONS = [
   "symptom": "09_Weakness",
   "symptom_ja": "脱力",
   "order": 3,
+  "phase": 2,
+  "tag": "バイタル",
+  "adopted": true,
+  "prompt_ja": "バイタルを確認します。",
+  "target": "Let me check your vitals.",
+  "acceptable": [
+   "Let me check your vitals."
+  ],
+  "keywords": [
+   "let",
+   "check",
+   "vitals"
+  ],
+  "freq": 4
+ },
+ {
+  "id": "09_Weakness__4",
+  "symptom": "09_Weakness",
+  "symptom_ja": "脱力",
+  "order": 4,
   "phase": 3,
   "tag": "発症",
   "adopted": true,
@@ -2380,10 +2684,10 @@ const EXPRESSIONS = [
   "freq": 6
  },
  {
-  "id": "09_Weakness__4",
+  "id": "09_Weakness__5",
   "symptom": "09_Weakness",
   "symptom_ja": "脱力",
-  "order": 4,
+  "order": 5,
   "phase": 3,
   "tag": "発症(last known well)",
   "adopted": true,
@@ -2401,10 +2705,10 @@ const EXPRESSIONS = [
   "freq": 0
  },
  {
-  "id": "09_Weakness__5",
+  "id": "09_Weakness__6",
   "symptom": "09_Weakness",
   "symptom_ja": "脱力",
-  "order": 5,
+  "order": 6,
   "phase": 3,
   "tag": "随伴症状",
   "adopted": true,
@@ -2421,10 +2725,10 @@ const EXPRESSIONS = [
   "freq": 0
  },
  {
-  "id": "09_Weakness__6",
+  "id": "09_Weakness__7",
   "symptom": "09_Weakness",
   "symptom_ja": "脱力",
-  "order": 6,
+  "order": 7,
   "phase": 4,
   "tag": "既往歴",
   "adopted": true,
@@ -2441,10 +2745,10 @@ const EXPRESSIONS = [
   "freq": 0
  },
  {
-  "id": "09_Weakness__7",
+  "id": "09_Weakness__8",
   "symptom": "09_Weakness",
   "symptom_ja": "脱力",
-  "order": 7,
+  "order": 8,
   "phase": 4,
   "tag": "抗凝固薬",
   "adopted": true,
@@ -2461,10 +2765,10 @@ const EXPRESSIONS = [
   "freq": 5
  },
  {
-  "id": "09_Weakness__8",
+  "id": "09_Weakness__9",
   "symptom": "09_Weakness",
   "symptom_ja": "脱力",
-  "order": 8,
+  "order": 9,
   "phase": 4,
   "tag": "アレルギー",
   "adopted": true,
@@ -2479,10 +2783,10 @@ const EXPRESSIONS = [
   "freq": 104
  },
  {
-  "id": "09_Weakness__9",
+  "id": "09_Weakness__10",
   "symptom": "09_Weakness",
   "symptom_ja": "脱力",
-  "order": 9,
+  "order": 10,
   "phase": 5,
   "tag": "身体評価(脳卒中)",
   "adopted": true,
@@ -2499,10 +2803,10 @@ const EXPRESSIONS = [
   "freq": 0
  },
  {
-  "id": "09_Weakness__10",
+  "id": "09_Weakness__11",
   "symptom": "09_Weakness",
   "symptom_ja": "脱力",
-  "order": 10,
+  "order": 11,
   "phase": 5,
   "tag": "身体評価",
   "adopted": true,
@@ -2521,10 +2825,10 @@ const EXPRESSIONS = [
   "freq": 0
  },
  {
-  "id": "09_Weakness__11",
+  "id": "09_Weakness__12",
   "symptom": "09_Weakness",
   "symptom_ja": "脱力",
-  "order": 11,
+  "order": 12,
   "phase": 6,
   "tag": "指示",
   "adopted": true,
@@ -2541,10 +2845,10 @@ const EXPRESSIONS = [
   "freq": 4
  },
  {
-  "id": "09_Weakness__12",
+  "id": "09_Weakness__13",
   "symptom": "09_Weakness",
   "symptom_ja": "脱力",
-  "order": 12,
+  "order": 13,
   "phase": 7,
   "tag": "安心づけ",
   "adopted": true,
@@ -2562,10 +2866,10 @@ const EXPRESSIONS = [
   "freq": 6
  },
  {
-  "id": "09_Weakness__13",
+  "id": "09_Weakness__14",
   "symptom": "09_Weakness",
   "symptom_ja": "脱力",
-  "order": 13,
+  "order": 14,
   "phase": 8,
   "tag": "搬送先",
   "adopted": true,
@@ -2628,6 +2932,26 @@ const EXPRESSIONS = [
   "symptom": "10_General_Fatigue",
   "symptom_ja": "全身倦怠感",
   "order": 3,
+  "phase": 2,
+  "tag": "バイタル",
+  "adopted": true,
+  "prompt_ja": "バイタルを確認します。",
+  "target": "Let me check your vitals.",
+  "acceptable": [
+   "Let me check your vitals."
+  ],
+  "keywords": [
+   "let",
+   "check",
+   "vitals"
+  ],
+  "freq": 4
+ },
+ {
+  "id": "10_General_Fatigue__4",
+  "symptom": "10_General_Fatigue",
+  "symptom_ja": "全身倦怠感",
+  "order": 4,
   "phase": 3,
   "tag": "発症",
   "adopted": true,
@@ -2644,10 +2968,10 @@ const EXPRESSIONS = [
   "freq": 4
  },
  {
-  "id": "10_General_Fatigue__4",
+  "id": "10_General_Fatigue__5",
   "symptom": "10_General_Fatigue",
   "symptom_ja": "全身倦怠感",
-  "order": 4,
+  "order": 5,
   "phase": 3,
   "tag": "随伴症状",
   "adopted": true,
@@ -2665,10 +2989,10 @@ const EXPRESSIONS = [
   "freq": 8
  },
  {
-  "id": "10_General_Fatigue__5",
+  "id": "10_General_Fatigue__6",
   "symptom": "10_General_Fatigue",
   "symptom_ja": "全身倦怠感",
-  "order": 5,
+  "order": 6,
   "phase": 3,
   "tag": "随伴症状",
   "adopted": true,
@@ -2686,10 +3010,10 @@ const EXPRESSIONS = [
   "freq": 0
  },
  {
-  "id": "10_General_Fatigue__6",
+  "id": "10_General_Fatigue__7",
   "symptom": "10_General_Fatigue",
   "symptom_ja": "全身倦怠感",
-  "order": 6,
+  "order": 7,
   "phase": 3,
   "tag": "Red-flag",
   "adopted": true,
@@ -2705,10 +3029,10 @@ const EXPRESSIONS = [
   "freq": 0
  },
  {
-  "id": "10_General_Fatigue__7",
+  "id": "10_General_Fatigue__8",
   "symptom": "10_General_Fatigue",
   "symptom_ja": "全身倦怠感",
-  "order": 7,
+  "order": 8,
   "phase": 4,
   "tag": "既往歴",
   "adopted": true,
@@ -2724,10 +3048,10 @@ const EXPRESSIONS = [
   "freq": 0
  },
  {
-  "id": "10_General_Fatigue__8",
+  "id": "10_General_Fatigue__9",
   "symptom": "10_General_Fatigue",
   "symptom_ja": "全身倦怠感",
-  "order": 8,
+  "order": 9,
   "phase": 4,
   "tag": "アレルギー/内服薬",
   "adopted": true,
@@ -2743,31 +3067,72 @@ const EXPRESSIONS = [
   "freq": 0
  },
  {
-  "id": "10_General_Fatigue__9",
-  "symptom": "10_General_Fatigue",
-  "symptom_ja": "全身倦怠感",
-  "order": 9,
-  "phase": 5,
-  "tag": "身体評価",
-  "adopted": true,
-  "prompt_ja": "血圧を確認する",
-  "target": "Let me check your blood pressure.",
-  "acceptable": [
-   "Let me check your blood pressure."
-  ],
-  "keywords": [
-   "let",
-   "check",
-   "blood",
-   "pressure"
-  ],
-  "freq": 1
- },
- {
   "id": "10_General_Fatigue__10",
   "symptom": "10_General_Fatigue",
   "symptom_ja": "全身倦怠感",
   "order": 10,
+  "phase": 5,
+  "tag": "身体評価",
+  "adopted": true,
+  "prompt_ja": "心臓と血圧を確認します。",
+  "target": "We'll check your heart and blood pressure.",
+  "acceptable": [
+   "We'll check your heart and blood pressure."
+  ],
+  "keywords": [
+   "check",
+   "heart",
+   "blood",
+   "pressure"
+  ],
+  "freq": 0
+ },
+ {
+  "id": "10_General_Fatigue__11",
+  "symptom": "10_General_Fatigue",
+  "symptom_ja": "全身倦怠感",
+  "order": 11,
+  "phase": 5,
+  "tag": "身体評価",
+  "adopted": true,
+  "prompt_ja": "両腕を上げてください。",
+  "target": "Raise both your arms.",
+  "acceptable": [
+   "Raise both your arms."
+  ],
+  "keywords": [
+   "raise",
+   "both",
+   "arms"
+  ],
+  "freq": 0
+ },
+ {
+  "id": "10_General_Fatigue__12",
+  "symptom": "10_General_Fatigue",
+  "symptom_ja": "全身倦怠感",
+  "order": 12,
+  "phase": 5,
+  "tag": "身体評価",
+  "adopted": true,
+  "prompt_ja": "腹部を触診します。",
+  "target": "I'm going to gently feel your stomach.",
+  "acceptable": [
+   "I'm going to gently feel your stomach."
+  ],
+  "keywords": [
+   "going",
+   "gently",
+   "feel",
+   "stomach"
+  ],
+  "freq": 0
+ },
+ {
+  "id": "10_General_Fatigue__13",
+  "symptom": "10_General_Fatigue",
+  "symptom_ja": "全身倦怠感",
+  "order": 13,
   "phase": 6,
   "tag": "指示",
   "adopted": true,
@@ -2784,10 +3149,10 @@ const EXPRESSIONS = [
   "freq": 4
  },
  {
-  "id": "10_General_Fatigue__11",
+  "id": "10_General_Fatigue__14",
   "symptom": "10_General_Fatigue",
   "symptom_ja": "全身倦怠感",
-  "order": 11,
+  "order": 14,
   "phase": 7,
   "tag": "安心づけ",
   "adopted": true,
@@ -2805,24 +3170,22 @@ const EXPRESSIONS = [
   "freq": 6
  },
  {
-  "id": "10_General_Fatigue__12",
+  "id": "10_General_Fatigue__15",
   "symptom": "10_General_Fatigue",
   "symptom_ja": "全身倦怠感",
-  "order": 12,
+  "order": 15,
   "phase": 8,
-  "tag": "処置(EKG)/搬送",
+  "tag": "搬送先",
   "adopted": true,
-  "prompt_ja": "心臓と血圧を確認します。",
-  "target": "We'll check your heart and blood pressure.",
+  "prompt_ja": "病院へ搬送します。",
+  "target": "We're taking you to the hospital.",
   "acceptable": [
-   "We'll check your heart and blood pressure."
+   "We're taking you to the hospital."
   ],
   "keywords": [
-   "check",
-   "heart",
-   "blood",
-   "pressure"
+   "taking",
+   "hospital"
   ],
-  "freq": 0
+  "freq": 2
  }
 ];
